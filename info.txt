@@ -8,3 +8,8 @@ STEP2: Conf
     - Ctrl+MAJ+P > Preferences: Open > "liveSassCompile.settings.formats"
     - "format": "compressed", (compresse the css code)
     - "savePath": "/css", (the folder where the css plain is saved)
+
+STEP3: Scss organisation
+    - sass partial (le decoupage du CSS en plusieur fichier _<nom>.scss contenu dans un folder possedant un _<index>.scss qui @forward l'ensemble du contenu des partial)
+    - sass variable (on peut declarer une variable avec --<nomvariable>:<css operation>)
+    - custom property (on peut utilier le custom property venant d'un folder partial avec @use <nom> as "acronyme" puis utiliser la custom property <nom>.$<nom>:<css operation>)
