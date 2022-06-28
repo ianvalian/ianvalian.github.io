@@ -1,1 +1,0 @@
-header{display:flex;justify-content:center;align-items:center;flex-direction:column;background:#e5e5e3;height:100vh;color:#535050}header button{background:#54a8c9}header button:hover{background:red}header button::after{content:" $"}.contact{display:flex;justify-content:center;align-items:center;flex-direction:row;background:#e4d0cf}/*# sourceMappingURL=style.css.map */
