@@ -1,0 +1,10 @@
+URLGIT: https://ianvalian.github.io
+
+STEP1: Extention
+    - Live Sass Compiler (Glenn Marks)
+    - Live Server
+
+STEP2: Conf
+    - Ctrl+MAJ+P > Preferences: Open > "liveSassCompile.settings.formats"
+    - "format": "compressed", (compresse the css code)
+    - "savePath": "/css", (the folder where the css plain is saved)
