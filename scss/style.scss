@@ -1,0 +1,6 @@
+@use 'abstracts/header';
+@use 'abstracts/variables';
+
+.contact {
+    @include header.flexCenter(row, #e4d0cf);
+}

@@ -1,0 +1,25 @@
+@use './variables';
+
+@mixin flexCenter($direction, $background){
+    display: flex;
+    justify-content : center;
+    align-items: center;
+    flex-direction: $direction;
+    background: $background;
+}
+
+header {
+    @include flexCenter(column, #e5e5e3);
+
+    height: 100vh;
+    color: variables.$textColor;
+    button {
+        background: variables.$primaryBtn;
+        &:hover{
+            background: red;
+        }
+        &::after{
+            content: " $";
+        }
+    }
+}
