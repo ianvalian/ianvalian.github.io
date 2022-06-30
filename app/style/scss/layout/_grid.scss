@@ -9,7 +9,7 @@
     width: min(100% - 40px, 1000px);
     margin-inline: auto;
 
-    @include u.breakpoint("large"){
+    @include u.breakpoint(large){
         grid-template-columns: 2fr 1fr;
         grid-template-rows: auto;
     }
@@ -21,13 +21,25 @@
 
     &__main {
         background-color: hsl(240, 100%, 30%);
+        
+        @include u.breakpoint(medium){
+            background-color: hsl(120, 100%, 25%);
+        }
+        
+        @include u.breakpoint(large){
+            background-color: hsl(39, 100%, 50%);
+        }
     }
-
+    
     &__sidebar {
         background-color: hsl(300, 100%, 30%);
         
        @include u.breakpoint-down(medium){
             text-align: center;
+       }
+
+       @include u.breakpoint-down(small){
+            text-align: right;
        }
     }
 }

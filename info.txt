@@ -11,5 +11,11 @@ STEP2: Conf
 
 STEP3: Scss organisation
     - sass partial (le decoupage du CSS en plusieur fichier _<nom>.scss contenu dans un folder possedant un _<index>.scss qui @forward l'ensemble du contenu des partial)
-    - sass variable (on peut declarer une variable avec --<nomvariable>:<css operation>)
-    - custom property (on peut utilier le custom property venant d'un folder partial avec @use <nom> as "acronyme" puis utiliser la custom property <nom>.$<nom>:<css operation>)
+    - sass variables (on peut declarer une variable avec --<nomvariable>:<css operation> & use it like "use(--<name>))
+    - custom properties (on peut utilier le custom properties venant d'un folder partial avec @use <nom> as "acronyme" puis utiliser la custom property <domaine>.$<nom>:<css operation>)
+    - nessing (the way in sass to code scss inside the parents class "<parent>" & for children node "<parent>__<children>")
+    - mixins (use to define a bunch of code reusable)
+    - viewport with (vw unit) or calc(16px + 2vw) function or clamp()
+
+
+    video : https://www.youtube.com/watch?v=jfMHA8SqUL4&list=PLf2hvDAO56-HFRQtuoxwQI_CZVjerBXAh >  2:29:31
