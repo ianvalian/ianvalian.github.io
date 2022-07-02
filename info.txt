@@ -1,15 +1,36 @@
 URLGIT: https://ianvalian.github.io
 
-STEP1: Extention
+Extention
     - Live Sass Compiler (Glenn Marks)
     - Live Server
+    - Prettier - Code Formatter
 
-STEP2: Conf
+Conf Live SassComplier
     - Ctrl+MAJ+P > Preferences: Open > "liveSassCompile.settings.formats"
     - "format": "compressed", (compresse the css code)
     - "savePath": "/css", (the folder where the css plain is saved)
 
-STEP3: Scss organisation
+Conf Prettier - Code Formatter
+    - Ctrl+MAJ+P > Preferences: Open > "Editor: Default Formatter"
+    - Select the good one
+    - Ctrl+MAJ+P > Preferences: Open > "Editor: Format On Save"
+    - Cross the good checkbox ;)
+
+GIT new featurs
+    # Start a new feature
+    git checkout -b new-feature main
+    # Edit some files
+    git add <file>
+    git commit -m "Start a feature"
+    # Edit some files
+    git add <file>
+    git commit -m "Finish a feature"
+    # Merge in the new-feature branch
+    git checkout main
+    git merge new-feature
+    git branch -d new-feature
+
+Scss organisation
     - sass partial (le decoupage du CSS en plusieur fichier _<nom>.scss contenu dans un folder possedant un _<index>.scss qui @forward l'ensemble du contenu des partial)
     - sass variables (on peut declarer une variable avec --<nomvariable>:<css operation> & use it like "use(--<name>))
     - custom properties (on peut utilier le custom properties venant d'un folder partial avec @use <nom> as "acronyme" puis utiliser la custom property <domaine>.$<nom>:<css operation>)
