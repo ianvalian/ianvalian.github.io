@@ -1,6 +1,5 @@
 @use "../util" as u;
 
-
 .grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -20,8 +19,6 @@
     }
 
     &__main {
-        background-color: hsl(240, 100%, 30%);
-        
         @include u.breakpoint(medium){
             background-color: hsl(120, 100%, 25%);
         }
@@ -32,8 +29,6 @@
     }
     
     &__sidebar {
-        background-color: hsl(300, 100%, 30%);
-        
        @include u.breakpoint-down(medium){
             text-align: center;
        }
@@ -41,5 +36,9 @@
        @include u.breakpoint-down(small){
             text-align: right;
        }
+    }
+
+    &__widget {
+        padding: u.rem(16);
     }
 }

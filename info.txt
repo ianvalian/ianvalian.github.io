@@ -18,4 +18,4 @@ STEP3: Scss organisation
     - viewport with (vw unit) or calc(16px + 2vw) function or clamp()
 
 
-    video : https://www.youtube.com/watch?v=jfMHA8SqUL4&list=PLf2hvDAO56-HFRQtuoxwQI_CZVjerBXAh >  2:29:31
+    video : https://www.youtube.com/watch?v=jfMHA8SqUL4&list=PLf2hvDAO56-HFRQtuoxwQI_CZVjerBXAh >  3:10:42
