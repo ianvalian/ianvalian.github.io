@@ -1,57 +1,85 @@
-<!DOCTYPE  html>
+<!DOCTYPE html>
 <html lang="FR">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>myTemplate.scss</title> 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@300&family=Sacramento&display=swap" rel="stylesheet">
+    <title>myTemplate.scss</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@300&family=Sacramento&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./app/style/css/style.css" />
     <script src="app/js/script.js"></script>
-</head>
-<body>
-    <div class="grid">
-        <main class="grid__main blue">
-            <h1>Hello my dear</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget pretium mauris, at efficitur risus. Cras eget libero ut arcu rhoncus vulputate. 
-                Sed vel sem nec purus maximus aliquet id a tellus. Mauris commodo tincidunt lorem, nec laoreet dolor placerat vel. 
-                Aliquam auctor, mi et commodo pellentesque, erat eros porttitor ligula, ut elementum orci libero eget urna. 
-                Quisque consectetur tempor felis, non consectetur dolor vulputate ut. Praesent vel metus dolor. Donec augue urna, vehicula ac egestas luctus, molestie quis nibh. 
-                Sed ultricies lacinia congue. Nulla eu libero metus. Proin luctus eros dui, eget feugiat nunc dapibus semper. Ut ut congue est.</p>
-            <button>Hello</button>
-        </main>
-
-        <aside class="grid__sidebar">
-            <div class="grid__widget green">
-                <h2>Our contact info</h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget pretium mauris, at efficitur risus. Cras eget libero ut arcu rhoncus vulputate. 
-                    Sed vel sem nec purus maximus aliquet id a tellus. Mauris commodo tincidunt lorem, nec laoreet dolor placerat vel. 
-                    Aliquam auctor, mi et commodo pellentesque, erat eros porttitor ligula, ut elementum orci libero eget urna. 
-                    Quisque consectetur tempor felis, non consectetur dolor vulputate ut. Praesent vel metus dolor. Donec augue urna, vehicula ac egestas luctus, molestie quis nibh. 
-                    Sed ultricies lacinia congue. Nulla eu libero metus. Proin luctus eros dui, eget feugiat nunc dapibus semper. Ut ut congue est.
-                </p>
-            </div>
-            <div class="grid__widget magenta">
-                <h2>Check out this cool thing!</h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget pretium mauris, at efficitur risus. Cras eget libero ut arcu rhoncus vulputate. 
-                    Sed vel sem nec purus maximus aliquet id a tellus.
-                </p>
-            </div>
-            <div class="grid__widget magenta">
-                <h2>More cool stuff is right here too!</h2>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque delectus dolores quis ad quaerat iure illo repellendus sit quas odio?
-                </p>
-            </div>
-
-            <button>Submit</button>
-        </aside>
-    </div>
-</body>
-
+  </head>
+  <body>
+    <header class="grid">
+      <main class="grid__main blue">
+        <h1>This is the header!</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget
+          pretium mauris, at efficitur risus. Cras eget libero ut arcu rhoncus
+          vulputate. Sed vel sem nec purus maximus aliquet id a tellus. Mauris
+          commodo tincidunt lorem, nec laoreet dolor placerat vel. Aliquam
+          auctor, mi et commodo pellentesque, erat eros porttitor ligula, ut
+          elementum orci libero eget urna. Quisque consectetur tempor felis, non
+          consectetur dolor vulputate ut. Praesent vel metus dolor. Donec augue
+          urna, vehicula ac egestas luctus, molestie quis nibh. Sed ultricies
+          lacinia congue. Nulla eu libero metus. Proin luctus eros dui, eget
+          feugiat nunc dapibus semper. Ut ut congue est.
+        </p>
+        <button>Hello</button>
+      </main>
+    </header>
+    <global class="grid">
+      <main class="grid__main blue">
+        <h1>This is the global part</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget
+          pretium mauris, at efficitur risus. Cras eget libero ut arcu rhoncus
+          vulputate. Sed vel sem nec purus maximus aliquet id a tellus. Mauris
+          commodo tincidunt lorem, nec laoreet dolor placerat vel. Aliquam
+          auctor, mi et commodo pellentesque, erat eros porttitor ligula, ut
+          elementum orci libero eget urna.
+        </p>
+        <button>Hello</button>
+      </main>
+    </global>
+    <info class="grid">
+      <main class="grid__main blue">
+        <h1>This is the info part</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget
+          pretium mauris, at efficitur risus. Cras eget libero ut arcu rhoncus
+          vulputate. Sed vel sem nec purus maximus aliquet id a tellus. Mauris
+          commodo tincidunt lorem, nec laoreet dolor placerat vel. Aliquam
+          auctor, mi et commodo pellentesque, erat eros porttitor ligula, ut
+          elementum orci libero eget urna. Quisque consectetur tempor felis, non
+          consectetur dolor vulputate ut. Praesent vel metus dolor. Donec augue
+          urna, vehicula ac egestas luctus, molestie quis nibh. Sed ultricies
+          lacinia congue. Nulla eu libero metus. Proin luctus eros dui, eget
+          feugiat nunc dapibus semper. Ut ut congue est.
+        </p>
+        <button>Hello</button>
+      </main>
+    </info>
+    <footer class="grid">
+      <main class="grid__main blue">
+        <h1>This is the footer</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget
+          pretium mauris, at efficitur risus. Cras eget libero ut arcu rhoncus
+          vulputate. Sed vel sem nec purus maximus aliquet id a tellus. Mauris
+          commodo tincidunt lorem, nec laoreet dolor placerat vel.
+        </p>
+        <button>Hello</button>
+      </main>
+    </footer>
+  </body>
 </html>
