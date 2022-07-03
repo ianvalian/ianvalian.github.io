@@ -30,6 +30,7 @@ GIT: new features
     # Merge in the new-feature branch
     git checkout main
     git merge new-feature
+    git push
     git branch -d new-feature
 
 Scss organisation
