@@ -22,6 +22,8 @@ GIT: new features
     # Edit some files
     git add <file>
     git commit -m "Start a feature"
+    #Send to GitHUB a new branche
+    git push --set-upstream origin new-feature
     # Edit some files
     git add <file>
     git commit -m "Finish a feature"
