@@ -1,22 +1,22 @@
 URLGIT: https://ianvalian.github.io
 
-Extention
+VSC Extentions
     - Live Sass Compiler (Glenn Marks)
     - Live Server
     - Prettier - Code Formatter
 
-Conf Live SassComplier
+VSC Conf: Live SassComplier
     - Ctrl+MAJ+P > Preferences: Open > "liveSassCompile.settings.formats"
     - "format": "compressed", (compresse the css code)
     - "savePath": "/css", (the folder where the css plain is saved)
 
-Conf Prettier - Code Formatter
+VSC Conf: Prettier - Code Formatter
     - Ctrl+MAJ+P > Preferences: Open > "Editor: Default Formatter"
     - Select the good one
     - Ctrl+MAJ+P > Preferences: Open > "Editor: Format On Save"
     - Cross the good checkbox ;)
 
-GIT new featurs
+GIT: new features
     # Start a new feature
     git checkout -b new-feature main
     # Edit some files
