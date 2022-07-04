@@ -1,20 +1,27 @@
 @use "../util" as u;
 
 html {
-    box-sizing: border-box;
-    font-size: 100%;
+  box-sizing: border-box;
+  font-size: 100%;
 }
 
-*, 
-*::before, 
+*,
+*::before,
 *::after {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
-body{
-    margin: 0;
-    padding: 0;
-    font-family: u.$sub-font;
-    background-color: var(--background-color);
-    color: var(--text-color);
+body {
+  margin: 0;
+  padding: 0;
+  font-family: u.$sub-font;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+img {
+  display: block;
+  border: 0;
+  width: 100%;
+  height: auto;
 }

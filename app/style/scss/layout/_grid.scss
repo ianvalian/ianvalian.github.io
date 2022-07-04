@@ -1,45 +1,145 @@
 @use "../util" as u;
 
-.grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto auto;
-  //   gap: u.rem(40);
-  //   width: min(100% - u.rem(40), u.rem(2400));
-  width: min(100%, u.rem(2400));
-  //   margin-inline: auto;
-
-  //   @include u.breakpoint(large) {
-  //     grid-template-columns: 2fr 1fr;
-  //     grid-template-rows: auto;
-  //   }
-
-  &__main,
-  &__sidebar {
-    padding: u.rem(40);
-  }
-
-  &__main {
-    @include u.breakpoint(medium) {
-      background-color: hsl(120, 100%, 25%);
-    }
-
-    @include u.breakpoint(large) {
-      background-color: hsl(39, 100%, 50%);
-    }
-  }
-
-  &__sidebar {
-    @include u.breakpoint-down(medium) {
-      text-align: center;
-    }
-
-    @include u.breakpoint-down(small) {
-      text-align: right;
-    }
-  }
-
-  &__widget {
-    padding: u.rem(16);
+@supports not (display: grid) {
+  .grid {
+    max-width: u.rem(800);
+    margin: 0 auto;
   }
 }
+
+.grid {
+  @include u.breakpoint(medium) {
+    display: grid;
+    grid-template-columns: 1fr repeat(2, minmax(auto, u.rem(600))) 1fr;
+  }
+}
+
+// SPLASH
+.splash {
+  background: #fff6e5;
+  color: var(--negative-text-color);
+  padding-bottom: u.rem(32);
+}
+
+.splash-content,
+.more-content,
+.buckets ul {
+  grid-column: 2/4;
+}
+
+.splash-content {
+  padding: u.rem(16);
+}
+
+.splash-text {
+  @include u.breakpoint(medium) {
+    columns: 2;
+    column-gap: 2em;
+  }
+}
+
+// MORE
+.more {
+  padding: 2em;
+}
+
+// BUCKET
+.buckets {
+  padding: u.rem(32) u.rem(16) u.rem(16);
+  background: #3e454c;
+  color: var(--negative-text-color);
+}
+
+.buckets ul {
+  margin: 0;
+  padding: 0;
+
+  @include u.breakpoint(medium) {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+.buckets li {
+  margin-bottom: u.rem(16);
+  background: white;
+  list-style-type: none;
+
+  @include u.breakpoint(medium) {
+    width: 31%;
+  }
+}
+
+.bucket {
+  padding: u.rem(24);
+}
+
+//TWINS
+.twin,
+.colophon aside {
+  @include u.breakpoint(medium) {
+    grid-column: span 2;
+  }
+}
+
+.twin {
+  padding: 2em;
+  background: #2185c5;
+  color: white;
+
+  &:last-of-type {
+    background: #ff7f66;
+  }
+}
+
+//COLOPHON
+.colophon {
+  padding: 2em;
+  background: hsl(0, 0%, 10%);
+  color: white;
+  text-align: center;
+}
+
+// .grid {
+//   display: grid;
+//   grid-template-columns: 1fr;
+//   grid-template-rows: auto auto;
+//   //   gap: u.rem(40);
+//   //   width: min(100% - u.rem(40), u.rem(2400));
+//   //   margin-inline: auto;
+//   width: min(100%, u.rem(1920));
+
+//   //   @include u.breakpoint(large) {
+//   //     grid-template-columns: 2fr 1fr;
+//   //     grid-template-rows: auto;
+//   //   }
+
+//   &__main,
+//   &__sidebar {
+//     padding: u.rem(40);
+//   }
+
+//   &__main {
+//     @include u.breakpoint(medium) {
+//       background-color: hsl(120, 100%, 25%);
+//     }
+
+//     @include u.breakpoint(large) {
+//       background-color: hsl(39, 100%, 50%);
+//     }
+//   }
+
+//   &__sidebar {
+//     @include u.breakpoint-down(medium) {
+//       text-align: center;
+//     }
+
+//     @include u.breakpoint-down(small) {
+//       text-align: right;
+//     }
+//   }
+
+//   &__widget {
+//     padding: u.rem(16);
+//   }
+// }
