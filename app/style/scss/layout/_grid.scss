@@ -48,30 +48,30 @@
   padding: u.rem(32) u.rem(16) u.rem(16);
   background: #3e454c;
   color: var(--negative-text-color);
-}
 
-.buckets ul {
-  margin: 0;
-  padding: 0;
+  & ul {
+    margin: 0;
+    padding: 0;
 
-  @include u.breakpoint(medium) {
-    display: flex;
-    justify-content: space-around;
+    @include u.breakpoint(medium) {
+      display: flex;
+      justify-content: space-around;
+    }
   }
-}
 
-.buckets li {
-  margin-bottom: u.rem(16);
-  background: white;
-  list-style-type: none;
+  & li {
+    margin-bottom: u.rem(16);
+    background: white;
+    list-style-type: none;
 
-  @include u.breakpoint(medium) {
-    width: 31%;
+    @include u.breakpoint(medium) {
+      width: 31%;
+    }
   }
-}
 
-.bucket {
-  padding: u.rem(24);
+  &___bucket {
+    padding: u.rem(24);
+  }
 }
 
 //TWINS
