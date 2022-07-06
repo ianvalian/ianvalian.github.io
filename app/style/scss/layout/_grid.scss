@@ -28,19 +28,19 @@
 }
 
 .splash-content {
-  padding: u.rem(16);
+  padding: u.rem(32);
 }
 
 .splash-text {
   @include u.breakpoint(medium) {
     columns: 2;
-    column-gap: 2em;
+    column-gap: u.rem(32);
   }
 }
 
 // MORE
 .more {
-  padding: 2em;
+  padding: u.rem(32);
 }
 
 // BUCKET
@@ -53,8 +53,10 @@
     margin: 0;
     padding: 0;
 
-    @include u.breakpoint(medium) {
+    @include u.breakpoint(small) {
       display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
       justify-content: space-around;
     }
   }
@@ -64,13 +66,17 @@
     background: white;
     list-style-type: none;
 
+    @include u.breakpoint(small) {
+      width: 48%;
+    }
+
     @include u.breakpoint(medium) {
       width: 31%;
     }
   }
 
   &___bucket {
-    padding: u.rem(24);
+    padding: u.rem(16);
   }
 }
 
@@ -83,7 +89,7 @@
 }
 
 .twin {
-  padding: 2em;
+  padding: u.rem(32);
   background: #2185c5;
   color: white;
 
@@ -94,52 +100,8 @@
 
 //COLOPHON
 .colophon {
-  padding: 2em;
+  padding: u.rem(32);
   background: hsl(0, 0%, 10%);
   color: white;
   text-align: center;
 }
-
-// .grid {
-//   display: grid;
-//   grid-template-columns: 1fr;
-//   grid-template-rows: auto auto;
-//   //   gap: u.rem(40);
-//   //   width: min(100% - u.rem(40), u.rem(2400));
-//   //   margin-inline: auto;
-//   width: min(100%, u.rem(1920));
-
-//   //   @include u.breakpoint(large) {
-//   //     grid-template-columns: 2fr 1fr;
-//   //     grid-template-rows: auto;
-//   //   }
-
-//   &__main,
-//   &__sidebar {
-//     padding: u.rem(40);
-//   }
-
-//   &__main {
-//     @include u.breakpoint(medium) {
-//       background-color: hsl(120, 100%, 25%);
-//     }
-
-//     @include u.breakpoint(large) {
-//       background-color: hsl(39, 100%, 50%);
-//     }
-//   }
-
-//   &__sidebar {
-//     @include u.breakpoint-down(medium) {
-//       text-align: center;
-//     }
-
-//     @include u.breakpoint-down(small) {
-//       text-align: right;
-//     }
-//   }
-
-//   &__widget {
-//     padding: u.rem(16);
-//   }
-// }
