@@ -1,0 +1,13 @@
+.parallax {
+  /* Votre image */
+  background-image: url("https://www.codeur.com/tuto/wp-content/uploads/2022/02/p1.jpg");
+
+  /* Une hauteur variable */
+  height: 100vh;
+
+  /* L'effet de parallax */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
