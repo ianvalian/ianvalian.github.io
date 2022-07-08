@@ -15,6 +15,11 @@
 }
 
 // SPLASH
+.img-splash {
+  max-height: 40vh;
+  overflow: hidden;
+}
+
 .splash {
   background: #fff6e5;
   color: var(--negative-text-color);
