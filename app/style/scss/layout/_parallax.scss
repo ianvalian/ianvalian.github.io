@@ -1,6 +1,6 @@
 .parallax-splash {
   /* Votre image */
-  background-image: url("https://www.codeur.com/tuto/wp-content/uploads/2022/02/p1.jpg");
+  background-image: url("/app/imgs/util/parallax02.JPG");
 
   /* Une hauteur variable */
   height: 100vh;
@@ -12,6 +12,7 @@
   background-size: cover;
 }
 
+/* need to be set to master div of the content*/
 .parallax-wrapper {
   height: 100vh;
   overflow-y: auto;
@@ -44,12 +45,6 @@
     max-width: 1000px;
   }
 
-  .middleground2 {
-    transform: translateZ(-8px) scale(1.8);
-    bottom: 0;
-    max-width: 1000px;
-  }
-
   .foreground {
     transform: translateZ(-5px) scale(1.5);
     bottom: 0;
@@ -58,7 +53,6 @@
 
   .background,
   .middleground,
-  .middleground2,
   .foreground {
     position: absolute;
     z-index: -1;
