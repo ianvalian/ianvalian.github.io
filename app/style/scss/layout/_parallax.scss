@@ -30,17 +30,24 @@
   }
 
   .background {
-    transform: translateZ(-10px) scale(2);
+    transform: translateZ(-10px) scale(2.1);
     height: 100%;
     width: 100%;
     object-fit: cover;
   }
 
   .middleground {
-    transform: translateZ(-6px) scale(1.7);
-    height: 100%;
+    transform: translateZ(-8px) scale(1.8);
     width: 100%;
     object-fit: cover;
+    bottom: 0;
+    max-width: 1000px;
+  }
+
+  .middleground2 {
+    transform: translateZ(-8px) scale(1.8);
+    bottom: 0;
+    max-width: 1000px;
   }
 
   .foreground {
@@ -51,6 +58,7 @@
 
   .background,
   .middleground,
+  .middleground2,
   .foreground {
     position: absolute;
     z-index: -1;
