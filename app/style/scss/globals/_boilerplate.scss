@@ -1,5 +1,77 @@
 @use "../util" as u;
 
+.image-stack {
+  display: grid;
+  position: relative; // imperative for the overlapping to work
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.image-stack__item--01 {
+  grid-row: 1;
+  grid-column: 1 / 4;
+  margin-top: 30vh; // slightly arbitrary, keeps proportion once resized
+  z-index: 1; // tells the browser to make this image on top
+}
+
+.image-stack__item--02 {
+  grid-row: 1;
+  grid-column: 2 / 4;
+}
+
+.image-stack__item--03 {
+  grid-row: 1;
+  grid-column: 4 / 7;
+  margin-top: 10vh; // slightly arbitrary, keeps proportion once resized
+  z-index: 1; // tells the browser to make this image on top
+}
+
+.image-stack__item--04 {
+  grid-row: 1;
+  grid-column: 7 / 12;
+  margin-top: 15vh; // slightly arbitrary, keeps proportion once resized
+  z-index: 2; // tells the browser to make this image on top
+}
+
+.image-stack__item--05 {
+  grid-row: 1;
+  grid-column: 8/ 13;
+  margin-top: 5vh; // slightly arbitrary, keeps proportion once resized
+}
+
+.image-stack__item--06 {
+  grid-row: 1;
+  grid-column: 8 / 10;
+  margin-top: 60vh; // slightly arbitrary, keeps proportion once resized
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+galery {
+  height: 100vh;
+  width: 95%;
+  padding-left: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+hongBao {
+}
+
+polaroid {
+  display: block;
+  background: #fff;
+  padding: u.rem(16) u.rem(16) u.rem(32) u.rem(16);
+  box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.2);
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
 html {
   box-sizing: border-box;
   font-size: 100%;
@@ -17,11 +89,5 @@ body {
   font-family: u.$sub-font;
   background-color: var(--background-color);
   color: var(--text-color);
-}
-
-img {
-  display: block;
-  border: 0;
-  width: 100%;
-  height: auto;
+  background-image: var(--background-image);
 }
