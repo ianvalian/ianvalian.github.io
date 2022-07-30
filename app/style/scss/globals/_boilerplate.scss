@@ -4,44 +4,89 @@
   display: grid;
   position: relative; // imperative for the overlapping to work
   grid-template-columns: repeat(12, 1fr);
-}
 
-.image-stack__item--01 {
-  grid-row: 1;
-  grid-column: 1 / 4;
-  margin-top: 30vh; // slightly arbitrary, keeps proportion once resized
-  z-index: 1; // tells the browser to make this image on top
-}
+  @include u.breakpoint-down(medium) {
+    grid-template-columns: repeat(6, 1fr);
+  }
 
-.image-stack__item--02 {
-  grid-row: 1;
-  grid-column: 2 / 4;
-}
+  &__item--pola1 {
+    grid-row: 1;
+    grid-column: 1/4;
+    margin-top: 5%; // slightly arbitrary, keeps proportion once resized
+    z-index: 1; // tells the browser to make this image on top
+    height: fit-content;
+  }
 
-.image-stack__item--03 {
-  grid-row: 1;
-  grid-column: 4 / 7;
-  margin-top: 10vh; // slightly arbitrary, keeps proportion once resized
-  z-index: 1; // tells the browser to make this image on top
-}
+  &__item--gift {
+    grid-row: 1;
+    grid-column: 1/5;
+    margin-top: 38%; // slightly arbitrary, keeps proportion once resized
+    height: fit-content;
+  }
 
-.image-stack__item--04 {
-  grid-row: 1;
-  grid-column: 7 / 12;
-  margin-top: 15vh; // slightly arbitrary, keeps proportion once resized
-  z-index: 2; // tells the browser to make this image on top
-}
+  &__item--fleur {
+    grid-row: 1;
+    grid-column: 3/5;
+    margin-top: 10%; // slightly arbitrary, keeps proportion once resized
+    z-index: 3; // tells the browser to make this image on top
+    height: fit-content;
+  }
 
-.image-stack__item--05 {
-  grid-row: 1;
-  grid-column: 8/ 13;
-  margin-top: 5vh; // slightly arbitrary, keeps proportion once resized
-}
+  &__item--pola2 {
+    grid-row: 1;
+    grid-column: 4/7;
+    margin-top: 30%; // slightly arbitrary, keeps proportion once resized
+    z-index: 2; // tells the browser to make this image on top
+    height: fit-content;
+  }
 
-.image-stack__item--06 {
-  grid-row: 1;
-  grid-column: 8 / 10;
-  margin-top: 60vh; // slightly arbitrary, keeps proportion once resized
+  &__item--domaine {
+    grid-row: 1;
+    grid-column: 6/10;
+    margin-top: 85%; // slightly arbitrary, keeps proportion once resized
+    height: fit-content;
+
+    @include u.breakpoint-down(medium) {
+      grid-row: 2;
+      grid-column: 1/5;
+    }
+  }
+
+  &__item--invit {
+    grid-row: 1;
+    grid-column: 6/11;
+    margin-top: 26%; // slightly arbitrary, keeps proportion once resized
+    z-index: 3; // tells the browser to make this image on top
+    height: fit-content;
+
+    @include u.breakpoint-down(medium) {
+      grid-row: 2;
+      grid-column: 1/5;
+    }
+  }
+
+  &__item--leter {
+    grid-row: 1;
+    grid-column: 7/12;
+    height: fit-content;
+
+    @include u.breakpoint-down(medium) {
+      grid-row: 2;
+      grid-column: 2/6;
+    }
+  }
+
+  &__item--prog {
+    grid-row: 1;
+    grid-column: 11/13;
+    margin-top: 100%; // slightly arbitrary, keeps proportion once resized
+    height: fit-content;
+
+    @include u.breakpoint-down(medium) {
+      grid-row: 2;
+      grid-column: 5/7;
+    }
+  }
 }
 
 img {
@@ -55,21 +100,6 @@ galery {
   padding-left: auto;
   margin-left: auto;
   margin-right: auto;
-}
-
-hongBao {
-}
-
-polaroid {
-  display: block;
-  background: #fff;
-  padding: u.rem(16) u.rem(16) u.rem(32) u.rem(16);
-  box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.2);
-
-  img {
-    max-width: 100%;
-    height: auto;
-  }
 }
 
 html {
