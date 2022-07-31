@@ -15,13 +15,17 @@
 @include keyframes-animation(float-slow) {
   0% {
     @include prefix-property(transform, translateY(0px));
-    z-index: 10;
   }
   50% {
     @include prefix-property(transform, translateY(-15px));
   }
   100% {
     @include prefix-property(transform, translateY(0px));
-    z-index: 10;
+  }
+}
+
+@include keyframes-animation(getback) {
+  100% {
+    @include prefix-property(transform, translateY(0px));
   }
 }

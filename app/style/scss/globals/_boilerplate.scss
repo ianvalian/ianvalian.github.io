@@ -16,8 +16,12 @@
     z-index: 1; // tells the browser to make this image on top
     height: fit-content;
 
+    animation: float-slow 4s ease-in-out 0s infinite;
+    animation-play-state: paused;
+
     &:hover {
-      animation: float-slow 4s ease-in-out 0s infinite;
+      animation-play-state: running;
+      z-index: 10;
     }
   }
 
