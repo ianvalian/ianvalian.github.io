@@ -19,9 +19,22 @@
     animation: float-slow 4s ease-in-out 0s infinite;
     animation-play-state: paused;
 
-    &:hover {
+    &:hover,
+    :active {
       animation-play-state: running;
       z-index: 10;
+
+      a {
+        @include u.breakpoint-down(medium) {
+          pointer-events: auto;
+        }
+      }
+    }
+
+    a {
+      @include u.breakpoint-down(medium) {
+        pointer-events: none;
+      }
     }
   }
 
@@ -31,8 +44,12 @@
     margin-top: 38%; // slightly arbitrary, keeps proportion once resized
     height: fit-content;
 
+    animation: float-slow 4s ease-in-out 0s infinite;
+    animation-play-state: paused;
+
     &:hover {
-      animation: float-slow 4s ease-in-out 0s infinite;
+      animation-play-state: running;
+      z-index: 10;
     }
   }
 
@@ -42,6 +59,9 @@
     margin-top: 10%; // slightly arbitrary, keeps proportion once resized
     z-index: 3; // tells the browser to make this image on top
     height: fit-content;
+
+    pointer-events: none;
+    cursor: default;
   }
 
   &__item--pola2 {
@@ -51,8 +71,12 @@
     z-index: 2; // tells the browser to make this image on top
     height: fit-content;
 
+    animation: float-slow 4s ease-in-out 0s infinite;
+    animation-play-state: paused;
+
     &:hover {
-      animation: float-slow 4s ease-in-out 0s infinite;
+      animation-play-state: running;
+      z-index: 10;
     }
   }
 
@@ -67,8 +91,12 @@
       grid-column: 1/5;
     }
 
+    animation: float-slow 4s ease-in-out 0s infinite;
+    animation-play-state: paused;
+
     &:hover {
-      animation: float-slow 4s ease-in-out 0s infinite;
+      animation-play-state: running;
+      z-index: 10;
     }
   }
 
@@ -84,8 +112,12 @@
       grid-column: 1/5;
     }
 
+    animation: float-slow 4s ease-in-out 0s infinite;
+    animation-play-state: paused;
+
     &:hover {
-      animation: float-slow 4s ease-in-out 0s infinite;
+      animation-play-state: running;
+      z-index: 10;
     }
   }
 
@@ -93,6 +125,9 @@
     grid-row: 1;
     grid-column: 7/12;
     height: fit-content;
+
+    pointer-events: none;
+    cursor: default;
 
     @include u.breakpoint-down(medium) {
       grid-row: 2;
@@ -111,8 +146,12 @@
       grid-column: 5/7;
     }
 
+    animation: float-slow 4s ease-in-out 0s infinite;
+    animation-play-state: paused;
+
     &:hover {
-      animation: float-slow 4s ease-in-out 0s infinite;
+      animation-play-state: running;
+      z-index: 10;
     }
   }
 }
