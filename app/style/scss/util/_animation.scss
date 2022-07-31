@@ -1,0 +1,27 @@
+@mixin keyframes-animation($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+@mixin prefix-property($name, $value) {
+  -webkit-#{$name}: $value;
+  #{$name}: $value;
+}
+
+@include keyframes-animation(float-slow) {
+  0% {
+    @include prefix-property(transform, translateY(0px));
+    z-index: 10;
+  }
+  50% {
+    @include prefix-property(transform, translateY(-15px));
+  }
+  100% {
+    @include prefix-property(transform, translateY(0px));
+    z-index: 10;
+  }
+}
