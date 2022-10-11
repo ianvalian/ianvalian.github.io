@@ -19,22 +19,18 @@
     animation: float-slow 4s ease-in-out 0s infinite;
     animation-play-state: paused;
 
-    &:hover,
-    :active {
+    &:hover {
       animation-play-state: running;
       z-index: 10;
-
-      a {
-        @include u.breakpoint-down(medium) {
-          pointer-events: auto;
-        }
-      }
     }
 
-    a {
-      @include u.breakpoint-down(medium) {
-        pointer-events: none;
-      }
+    div a {
+      pointer-events: none;
+    }
+
+    &:active a {
+      //pointer-events: auto;
+      background-color: aqua;
     }
   }
 
