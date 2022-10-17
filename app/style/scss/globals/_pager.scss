@@ -1,0 +1,79 @@
+#pola1,
+#gift,
+#pola2,
+#domaine,
+#invit,
+#prog {
+  display: none;
+}
+
+// pager for pola1
+#pola1:checked ~ .overlay {
+  //animation: scaletoright 2500ms both cubic-bezier(0.77, 0, 0.175, 1);
+  animation: 2.5s scaletoright;
+}
+
+#pola1 ~ .content01-stack {
+  display: none;
+}
+#pola1:checked ~ .content01-stack {
+  display: grid;
+}
+#pola1:checked ~ .image-stack {
+  display: none;
+}
+
+// pager for gift
+#gift ~ .content02-stack {
+  display: none;
+}
+#gift:checked ~ .content02-stack {
+  display: grid;
+}
+#gift:checked ~ .image-stack {
+  display: none;
+}
+
+//pager for pola2
+#pola2 ~ .content03-stack {
+  display: none;
+}
+#pola2:checked ~ .content03-stack {
+  display: grid;
+}
+#pola2:checked ~ .image-stack {
+  display: none;
+}
+
+//pager for domaine
+#domaine ~ .content04-stack {
+  display: none;
+}
+#domaine:checked ~ .content04-stack {
+  display: grid;
+}
+#domaine:checked ~ .image-stack {
+  display: none;
+}
+
+//pager for invit
+#invit ~ .content05-stack {
+  display: none;
+}
+#invit:checked ~ .content05-stack {
+  display: grid;
+}
+#invit:checked ~ .image-stack {
+  display: none;
+}
+
+//pager for prog
+#prog ~ .content06-stack {
+  display: none;
+}
+#prog:checked ~ .content06-stack {
+  display: grid;
+}
+#prog:checked ~ .image-stack {
+  display: none;
+}
