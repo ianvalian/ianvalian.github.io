@@ -1,3 +1,4 @@
+// Display checkbox css hack
 #pola1,
 #gift,
 #pola2,
@@ -7,20 +8,25 @@
   display: none;
 }
 
-// pager for pola1
+/******* PAGER POLA1 *******/
+// Transition
 #pola1:checked ~ .overlay {
-  //animation: scaletoright 2500ms both cubic-bezier(0.77, 0, 0.175, 1);
   animation: 2.5s scaletoright;
 }
-
+// Display
 #pola1 ~ .content01-stack {
-  display: none;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
 }
 #pola1:checked ~ .content01-stack {
-  display: grid;
+  opacity: 1;
+  height: auto;
 }
 #pola1:checked ~ .image-stack {
-  display: none;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
 }
 
 // pager for gift

@@ -1,7 +1,7 @@
 @use "../util" as u;
 
 .overlay {
-  background: black;
+  background: white;
   z-index: 2;
   position: fixed;
   top: 0%;
@@ -35,6 +35,11 @@
   @include u.breakpoint-down(medium) {
     grid-template-columns: repeat(6, 1fr);
   }
+
+  // To make the content hidden during the transition between pages
+  transition: opacity 2.5s;
+  opacity: 1;
+  height: auto;
 
   &__item--pola1 {
     grid-row: 1;
@@ -169,6 +174,13 @@
       z-index: 10;
     }
   }
+}
+
+.content01-stack {
+  transition: opacity 2.5s;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
 }
 
 img {
