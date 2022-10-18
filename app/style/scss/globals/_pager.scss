@@ -1,4 +1,5 @@
 // Display checkbox css hack
+#home,
 #pola1,
 #gift,
 #pola2,
@@ -11,75 +12,24 @@
 /******* PAGER POLA1 *******/
 // Transition
 #pola1:checked ~ .overlay {
-  animation: 2.5s scaletoright;
+  animation: 2s scaletoright;
 }
-// Display
+#pola1 ~ .overlay {
+  animation: 2s scaletoright2;
+}
+// default page hidden
 #pola1 ~ .content01-stack {
   opacity: 0;
   height: 0;
-  //overflow: hidden;
+  overflow: hidden;
 }
+// checked box page display
 #pola1:checked ~ .content01-stack {
   opacity: 1;
   height: auto;
 }
+// checked home page hidden
 #pola1:checked ~ .image-stack {
   opacity: 0;
   height: 0;
-  //overflow: hidden;
-}
-
-// pager for gift
-#gift ~ .content02-stack {
-  display: none;
-}
-#gift:checked ~ .content02-stack {
-  display: grid;
-}
-#gift:checked ~ .image-stack {
-  display: none;
-}
-
-//pager for pola2
-#pola2 ~ .content03-stack {
-  display: none;
-}
-#pola2:checked ~ .content03-stack {
-  display: grid;
-}
-#pola2:checked ~ .image-stack {
-  display: none;
-}
-
-//pager for domaine
-#domaine ~ .content04-stack {
-  display: none;
-}
-#domaine:checked ~ .content04-stack {
-  display: grid;
-}
-#domaine:checked ~ .image-stack {
-  display: none;
-}
-
-//pager for invit
-#invit ~ .content05-stack {
-  display: none;
-}
-#invit:checked ~ .content05-stack {
-  display: grid;
-}
-#invit:checked ~ .image-stack {
-  display: none;
-}
-
-//pager for prog
-#prog ~ .content06-stack {
-  display: none;
-}
-#prog:checked ~ .content06-stack {
-  display: grid;
-}
-#prog:checked ~ .image-stack {
-  display: none;
 }

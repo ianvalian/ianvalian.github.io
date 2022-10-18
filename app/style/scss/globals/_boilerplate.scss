@@ -2,7 +2,7 @@
 
 .overlay {
   background: white;
-  z-index: 2;
+  z-index: 5;
   position: fixed;
   top: 0%;
   left: -25%;
@@ -31,13 +31,32 @@
   }
 }
 
+@keyframes scaletoright2 {
+  0% {
+    transform: scaleX(0) skewX(-40deg);
+    transform-origin: right;
+  }
+  50% {
+    transform: scaleX(1) skewX(0deg);
+    transform-origin: right;
+  }
+  51% {
+    transform: scaleX(1) skewX(0deg);
+    transform-origin: left;
+  }
+  100% {
+    transform: scaleX(0) skewX(40deg);
+    transform-origin: left;
+  }
+}
+
 .image-stack {
   @include u.breakpoint-down(medium) {
     grid-template-columns: repeat(6, 1fr);
   }
 
   // To make the content hidden during the transition between pages
-  transition: opacity 2s;
+  transition: opacity 1s 0.5s;
   opacity: 1;
   height: auto;
 
@@ -177,10 +196,9 @@
 }
 
 .content01-stack {
-  transition: opacity 2s;
+  transition: opacity 1s 0.5s;
   opacity: 0;
   height: 0;
-  overflow: hidden;
 }
 
 img {
