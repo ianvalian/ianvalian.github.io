@@ -17,7 +17,7 @@
 #pola1 ~ .content01-stack {
   opacity: 0;
   height: 0;
-  overflow: hidden;
+  //overflow: hidden;
 }
 #pola1:checked ~ .content01-stack {
   opacity: 1;
@@ -26,7 +26,7 @@
 #pola1:checked ~ .image-stack {
   opacity: 0;
   height: 0;
-  overflow: hidden;
+  //overflow: hidden;
 }
 
 // pager for gift

@@ -37,7 +37,7 @@
   }
 
   // To make the content hidden during the transition between pages
-  transition: opacity 2.5s;
+  transition: opacity 2s;
   opacity: 1;
   height: auto;
 
@@ -177,7 +177,7 @@
 }
 
 .content01-stack {
-  transition: opacity 2.5s;
+  transition: opacity 2s;
   opacity: 0;
   height: 0;
   overflow: hidden;
