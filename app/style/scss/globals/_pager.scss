@@ -19,17 +19,20 @@
 }
 // default page hidden
 #pola1 ~ .content01-stack {
-  opacity: 0;
-  height: 0;
-  overflow: hidden;
+  animation: hide 1s linear;
+  animation-fill-mode: forwards;
+}
+#pola1 ~ .image-stack {
+  animation: show 1s linear;
+  animation-fill-mode: forwards;
 }
 // checked box page display
 #pola1:checked ~ .content01-stack {
-  opacity: 1;
-  height: auto;
+  animation: show 1s linear;
+  animation-fill-mode: forwards;
 }
 // checked home page hidden
 #pola1:checked ~ .image-stack {
-  opacity: 0;
-  height: 0;
+  animation: hide 1s linear;
+  animation-fill-mode: forwards;
 }

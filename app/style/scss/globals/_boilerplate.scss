@@ -10,6 +10,15 @@
   height: 100%;
   transform: scaleX(0) skewX(-40deg);
   transform-origin: left;
+
+  &_bigTexte {
+    font: u.$sub-font;
+    font-size: 100px;
+    color: rgba(0, 0, 0, 0);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 @keyframes scaletoright {
@@ -50,16 +59,42 @@
   }
 }
 
-.image-stack {
-  @include u.breakpoint-down(medium) {
-    grid-template-columns: repeat(6, 1fr);
+@keyframes hide {
+  0% {
+    position: initial;
+    top: initial;
+    opacity: 1;
   }
+  99% {
+    position: initial;
+    top: initial;
+  }
+  100% {
+    position: fixed;
+    top: -1000vh;
+    opacity: 0;
+  }
+}
 
+@keyframes show {
+  0% {
+    position: fixed;
+    top: -1000vh;
+    opacity: 0;
+  }
+  99% {
+    position: fixed;
+    top: -1000vh;
+  }
+  100% {
+    position: initial;
+    top: initial;
+    opacity: 1;
+  }
+}
+
+.image-stack {
   // To make the content hidden during the transition between pages
-  transition: opacity 1s 0.5s;
-  opacity: 1;
-  height: auto;
-
   &__item--pola1 {
     grid-row: 1;
     grid-column: 1/4;
@@ -196,9 +231,21 @@
 }
 
 .content01-stack {
-  transition: opacity 1s 0.5s;
-  opacity: 0;
-  height: 0;
+}
+
+.float-return {
+  position: fixed;
+  bottom: 40px;
+  padding: 15px;
+  background-color: #b49276c2;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  box-shadow: 2px 2px 3px #999;
+
+  &__my-float {
+    //margin-top: 10px;
+  }
 }
 
 img {
@@ -207,6 +254,10 @@ img {
 }
 
 page {
+  @include u.breakpoint-down(medium) {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
   display: grid;
   position: relative; // imperative for the overlapping to work
   grid-template-columns: repeat(12, 1fr);
