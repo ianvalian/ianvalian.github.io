@@ -31,7 +31,6 @@ page {
   grid-template-columns: repeat(12, 1fr);
 
   height: 100vh;
-  width: 95%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -212,13 +211,21 @@ img {
   top: -1000vh;
   opacity: 0;
   z-index: -1;
+
+  &__designWraper {
+    grid-row: 1;
+    grid-column: 1/13;
+    margin: 2rem;
+    background-color: white;
+  }
 }
 
 //class of the floating button on the content pages
 .float-return {
   position: fixed;
-  bottom: 40px;
-  padding: 15px;
+  left: 2rem;
+  bottom: 2rem;
+  padding: 1rem;
   background-color: #b49276c2;
   color: #fff;
   border-radius: 50px;
