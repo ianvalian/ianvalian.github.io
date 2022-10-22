@@ -29,3 +29,107 @@
     @include prefix-property(transform, translateY(0px));
   }
 }
+
+//Annimation transition pager right-left
+@keyframes scaletoright {
+  0% {
+    transform: scaleX(0) skewX(-40deg);
+    transform-origin: left;
+  }
+  50% {
+    transform: scaleX(1) skewX(0deg);
+    transform-origin: left;
+  }
+  51% {
+    transform: scaleX(1) skewX(0deg);
+    transform-origin: right;
+  }
+  100% {
+    transform: scaleX(0) skewX(40deg);
+    transform-origin: right;
+  }
+}
+//Annimation transition pager left-right
+@keyframes scaletoright2 {
+  0% {
+    transform: scaleX(0) skewX(-40deg);
+    transform-origin: right;
+  }
+  50% {
+    transform: scaleX(1) skewX(0deg);
+    transform-origin: right;
+  }
+  51% {
+    transform: scaleX(1) skewX(0deg);
+    transform-origin: left;
+  }
+  100% {
+    transform: scaleX(0) skewX(40deg);
+    transform-origin: left;
+  }
+}
+//Annimation to hide an element
+@keyframes hide {
+  0% {
+    position: initial;
+    top: initial;
+    opacity: 1;
+  }
+  99% {
+    position: initial;
+    top: initial;
+  }
+  100% {
+    position: fixed;
+    top: -1000vh;
+    opacity: 0;
+    z-index: -1;
+  }
+}
+//Annimation to show an element
+@keyframes show {
+  0% {
+    position: fixed;
+    top: -1000vh;
+    opacity: 0;
+    z-index: -1;
+  }
+  99% {
+    position: fixed;
+    top: -1000vh;
+  }
+  100% {
+    position: initial;
+    top: initial;
+    opacity: 1;
+  }
+}
+
+//function to call each transition & show/hide to simulate the page transition
+@mixin pager-animation($start, $end) {
+  //page transition
+  &:checked ~ .overlay {
+    animation: 2s scaletoright;
+  }
+  & ~ .overlay {
+    animation: 2s scaletoright2;
+  }
+  //page visibility management destination
+  & ~ #{$end} {
+    animation: hide 1s linear;
+    animation-fill-mode: forwards;
+  }
+  &:checked ~ #{$end} {
+    animation: show 1s linear;
+    animation-fill-mode: forwards;
+  }
+  //page visibility management source
+  & ~ #{$start} {
+    animation: show 1s linear;
+    animation-fill-mode: forwards;
+  }
+  &:checked ~ #{$start} {
+    animation: hide 1s linear;
+    animation-fill-mode: forwards;
+  }
+}

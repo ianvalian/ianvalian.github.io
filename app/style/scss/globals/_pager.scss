@@ -1,3 +1,5 @@
+@use "../util" as u;
+
 // Display checkbox css hack
 #home,
 #pola1,
@@ -10,29 +12,16 @@
 }
 
 /******* PAGER POLA1 *******/
-// Transition
-#pola1:checked ~ .overlay {
-  animation: 2s scaletoright;
+#pola1 {
+  @include u.pager-animation(".image-stack", ".content01-stack");
 }
-#pola1 ~ .overlay {
-  animation: 2s scaletoright2;
+
+/******* PAGER POLA2 *******/
+#pola2 {
+  @include u.pager-animation(".image-stack", ".content02-stack");
 }
-// default page hidden
-#pola1 ~ .content01-stack {
-  animation: hide 1s linear;
-  animation-fill-mode: forwards;
-}
-#pola1 ~ .image-stack {
-  animation: show 1s linear;
-  animation-fill-mode: forwards;
-}
-// checked box page display
-#pola1:checked ~ .content01-stack {
-  animation: show 1s linear;
-  animation-fill-mode: forwards;
-}
-// checked home page hidden
-#pola1:checked ~ .image-stack {
-  animation: hide 1s linear;
-  animation-fill-mode: forwards;
+
+/******* PAGER gift *******/
+#gift {
+  @include u.pager-animation(".image-stack", ".content03-stack");
 }

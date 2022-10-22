@@ -1,5 +1,47 @@
 @use "../util" as u;
 
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: u.$sub-font;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  background-image: var(--background-image);
+}
+
+//css for each content pages displayed
+page {
+  @include u.breakpoint-down(medium) {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  display: grid;
+  position: relative; // imperative for the overlapping to work
+  grid-template-columns: repeat(12, 1fr);
+
+  height: 100vh;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+//overlay use for the transition animation _animation/scaletoright
 .overlay {
   background: white;
   z-index: 5;
@@ -21,78 +63,7 @@
   }
 }
 
-@keyframes scaletoright {
-  0% {
-    transform: scaleX(0) skewX(-40deg);
-    transform-origin: left;
-  }
-  50% {
-    transform: scaleX(1) skewX(0deg);
-    transform-origin: left;
-  }
-  51% {
-    transform: scaleX(1) skewX(0deg);
-    transform-origin: right;
-  }
-  100% {
-    transform: scaleX(0) skewX(40deg);
-    transform-origin: right;
-  }
-}
-
-@keyframes scaletoright2 {
-  0% {
-    transform: scaleX(0) skewX(-40deg);
-    transform-origin: right;
-  }
-  50% {
-    transform: scaleX(1) skewX(0deg);
-    transform-origin: right;
-  }
-  51% {
-    transform: scaleX(1) skewX(0deg);
-    transform-origin: left;
-  }
-  100% {
-    transform: scaleX(0) skewX(40deg);
-    transform-origin: left;
-  }
-}
-
-@keyframes hide {
-  0% {
-    position: initial;
-    top: initial;
-    opacity: 1;
-  }
-  99% {
-    position: initial;
-    top: initial;
-  }
-  100% {
-    position: fixed;
-    top: -1000vh;
-    opacity: 0;
-  }
-}
-
-@keyframes show {
-  0% {
-    position: fixed;
-    top: -1000vh;
-    opacity: 0;
-  }
-  99% {
-    position: fixed;
-    top: -1000vh;
-  }
-  100% {
-    position: initial;
-    top: initial;
-    opacity: 1;
-  }
-}
-
+//content of the home page
 .image-stack {
   // To make the content hidden during the transition between pages
   &__item--pola1 {
@@ -230,9 +201,31 @@
   }
 }
 
+//content of the pola1 page
 .content01-stack {
+  position: fixed;
+  top: -1000vh;
+  opacity: 0;
+  z-index: -1;
 }
 
+//content of the pola2 page
+.content02-stack {
+  position: fixed;
+  top: -1000vh;
+  opacity: 0;
+  z-index: -1;
+}
+
+//content of the gift page
+.content03-stack {
+  position: fixed;
+  top: -1000vh;
+  opacity: 0;
+  z-index: -1;
+}
+
+//class of the floating button on the content pages
 .float-return {
   position: fixed;
   bottom: 40px;
@@ -242,48 +235,4 @@
   border-radius: 50px;
   text-align: center;
   box-shadow: 2px 2px 3px #999;
-
-  &__my-float {
-    //margin-top: 10px;
-  }
-}
-
-img {
-  width: 100%;
-  display: block;
-}
-
-page {
-  @include u.breakpoint-down(medium) {
-    grid-template-columns: repeat(6, 1fr);
-  }
-
-  display: grid;
-  position: relative; // imperative for the overlapping to work
-  grid-template-columns: repeat(12, 1fr);
-
-  height: 100vh;
-  width: 95%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-html {
-  box-sizing: border-box;
-  font-size: 100%;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: u.$sub-font;
-  background-color: var(--background-color);
-  color: var(--text-color);
-  background-image: var(--background-image);
 }
