@@ -202,23 +202,12 @@ img {
 }
 
 //content of the pola1 page
-.content01-stack {
-  position: fixed;
-  top: -1000vh;
-  opacity: 0;
-  z-index: -1;
-}
-
-//content of the pola2 page
-.content02-stack {
-  position: fixed;
-  top: -1000vh;
-  opacity: 0;
-  z-index: -1;
-}
-
-//content of the gift page
-.content03-stack {
+.content01-stack,
+.content02-stack,
+.content03-stack,
+.content04-stack,
+.content05-stack,
+.content06-stack {
   position: fixed;
   top: -1000vh;
   opacity: 0;

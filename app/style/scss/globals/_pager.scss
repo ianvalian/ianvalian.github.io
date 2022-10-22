@@ -11,12 +11,12 @@
   display: none;
 }
 
-/******* PAGER POLA1 *******/
+/******* PAGER pola1 *******/
 #pola1 {
   @include u.pager-animation(".image-stack", ".content01-stack");
 }
 
-/******* PAGER POLA2 *******/
+/******* PAGER pola2 *******/
 #pola2 {
   @include u.pager-animation(".image-stack", ".content02-stack");
 }
@@ -24,4 +24,19 @@
 /******* PAGER gift *******/
 #gift {
   @include u.pager-animation(".image-stack", ".content03-stack");
+}
+
+/******* PAGER invit *******/
+#domaine {
+  @include u.pager-animation(".image-stack", ".content04-stack");
+}
+
+/******* PAGER domaine *******/
+#invit {
+  @include u.pager-animation(".image-stack", ".content05-stack");
+}
+
+/******* PAGER prog *******/
+#prog {
+  @include u.pager-animation(".image-stack", ".content06-stack");
 }
