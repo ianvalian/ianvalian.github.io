@@ -1,6 +1,8 @@
 :root {
   --background-color: hsl(0, 0%, 11%);
   --background-image: url("/app/imgs/util/background.jpg");
+  --horizontal-overlay-background-image: url("/app/imgs/util/background-contextX.png");
+  --vertical-overlay-background-image: url("/app/imgs/util/background-contextY.png");
   --text-color: hsl(0, 0%, 100%);
   --negative-text-color: hsl(0, 0%, 11%);
 }
