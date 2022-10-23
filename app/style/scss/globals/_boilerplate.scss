@@ -222,16 +222,47 @@ img {
     grid-column: 1/13;
     margin: 2rem;
     background-color: white;
+
+    display: grid;
+    grid-column-gap: 1rem;
+  }
+
+  &__inside01 {
+    grid-column: 1/7;
+    background-color: cornflowerblue;
+
+    padding: 1rem;
+  }
+  &__inside02 {
+    grid-column: 7/13;
+    background-color: coral;
+
+    padding: 1rem;
+  }
+
+  &__angleEucalyptusLefttop {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+  }
+  &__angleEucalyptusRightbottom {
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    transform: rotate(180deg);
   }
 }
 
 .backgroundFlower {
-  @include u.breakpoint-down(medium) {
+  /*@include u.breakpoint-down(medium) {
     background-image: var(--vertical-overlay-background-image);
   }
-
   background-image: var(--horizontal-overlay-background-image);
-  background-size: cover;
+  background-size: contain;*/
+  background-image: var(--background-angle-eucalyptus),
+    var(--background-angle-eucalyptus);
+  background-position: left top, right bottom;
+  background-repeat: no-repeat;
 }
 
 //class of the floating button on the content pages
@@ -245,4 +276,5 @@ img {
   border-radius: 50px;
   text-align: center;
   box-shadow: 2px 2px 3px #999;
+  z-index: 10;
 }
