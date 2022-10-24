@@ -222,6 +222,8 @@ img {
     grid-column: 1/13;
     margin: 2rem;
     background-color: white;
+    border: solid 5px #aa8b3b;
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
 
     @include u.breakpoint-down(medium) {
       grid-template-columns: repeat(6, 1fr);
@@ -232,7 +234,6 @@ img {
 
   &__inside01 {
     grid-column: 1/7;
-    background-color: cornflowerblue;
     padding: 1rem;
   }
   &__inside02 {
@@ -241,7 +242,6 @@ img {
       grid-column: 1/7;
     }
     grid-column: 7/13;
-    background-color: coral;
     padding: 1rem;
   }
 
@@ -267,7 +267,7 @@ img {
   left: 1rem;
   bottom: 1rem;
   padding: 1rem;
-  background-color: #b49276c2;
+  background-color: #aa8b3ba6;
   color: #fff;
   border-radius: 50px;
   text-align: center;
