@@ -97,6 +97,8 @@
   99% {
     position: fixed;
     top: -1000vh;
+    opacity: 0;
+    z-index: -1;
   }
   100% {
     position: initial;
