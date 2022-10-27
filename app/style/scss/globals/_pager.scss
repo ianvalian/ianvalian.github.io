@@ -11,10 +11,6 @@
   display: none;
 }
 
-#controler {
-  @include u.pager-animation-intro(".overlay-content", ".overlay-intro");
-}
-
 /******* PAGER pola1 *******/
 #pola1 {
   @include u.pager-animation(".image-stack", ".content01-stack");
