@@ -30,6 +30,23 @@
   }
 }
 
+@keyframes intro {
+  0% {
+    width: 100%;
+    height: 100vh;
+  }
+  99% {
+    width: 0%;
+    height: 0vh;
+  }
+  100% {
+    position: fixed;
+    top: -1000vh;
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
 //Annimation transition pager right-left
 @keyframes scaletoright {
   0% {
@@ -132,6 +149,20 @@
   }
   &:checked ~ #{$start} {
     animation: hide 1s linear;
+    animation-fill-mode: forwards;
+  }
+}
+
+//function hide a class & display another
+@mixin pager-animation-intro($start, $end) {
+  //page visibility management destination
+  & ~ #{$end} {
+    animation: hide 2s linear;
+    animation-fill-mode: forwards;
+  }
+  //page visibility management source
+  & ~ #{$start} {
+    animation: show 2s linear;
     animation-fill-mode: forwards;
   }
 }
