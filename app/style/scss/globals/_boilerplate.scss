@@ -21,8 +21,9 @@ body {
 
   & > .overlay-intro {
   }
+
   //all website in onepage
-  //overflow: hidden;
+  overflow: hidden;
 }
 
 //css for each content pages displayed
@@ -49,11 +50,15 @@ img {
 
 //overlay use for the intro animation
 .overlay-intro {
-  /*position: absolute;
-  z-index: 40;
+  background: white;
+  z-index: 10;
+  position: absolute;
+  top: 0%;
   width: 100%;
   height: 100vh;
-  background-color: rgb(255, 255, 255);*/
+
+  animation: 4s intro forwards;
+  animation-delay: 3s;
 }
 
 //overlay use for the transition animation _animation/scaletoright
