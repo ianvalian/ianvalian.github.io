@@ -66,16 +66,7 @@ img {
 
   img {
     max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  p {
-    font-family: u.$font;
-    color: black;
-    font-size: 4rem;
-    text-align: center;
-    margin: 0px;
+    max-height: 100vh;
   }
 }
 
