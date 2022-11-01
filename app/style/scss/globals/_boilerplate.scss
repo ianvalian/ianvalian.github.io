@@ -50,7 +50,6 @@ img {
 
 //overlay use for the intro animation
 .overlay-intro {
-  background-color: white;
   z-index: 10;
   position: absolute;
   top: 0%;
@@ -64,7 +63,16 @@ img {
   justify-content: center;
   align-items: center;
 
+  //background img
+  background-color: white;
+  background-image: var(--horizontal-overlay-background-image);
+  background-size: cover;
+  @include u.breakpoint-down(medium) {
+    background-image: var(--vertical-overlay-background-image);
+  }
+
   img {
+    background-color: white;
     max-width: 400px;
     max-height: 100vh;
     padding: 1rem;
