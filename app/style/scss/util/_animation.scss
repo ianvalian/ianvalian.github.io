@@ -105,6 +105,22 @@
     z-index: -1;
   }
 }
+//Annimation to hide an element
+@keyframes hideWithoutOpacity {
+  0% {
+    position: initial;
+    top: initial;
+  }
+  99% {
+    position: initial;
+    top: initial;
+  }
+  100% {
+    position: fixed;
+    top: -1000vh;
+    z-index: -1;
+  }
+}
 //Annimation to show an element
 @keyframes show {
   0% {
@@ -125,6 +141,76 @@
     opacity: 1;
   }
 }
+//Annimation to show an element
+@keyframes show2 {
+  0% {
+    position: initial;
+    top: initial;
+    opacity: 1;
+  }
+  100% {
+    position: initial;
+    top: initial;
+    opacity: 1;
+  }
+}
+//Annimation to growth an element
+@keyframes growth {
+  0% {
+    z-index: 99;
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    z-index: 99;
+    opacity: 1;
+    transform: scale(50);
+  }
+}
+//Annimation to reduce de size of an element
+@keyframes smallth {
+  0% {
+    z-index: 99;
+    opacity: 1;
+    transform: scale(50);
+  }
+  100% {
+    z-index: 99;
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+//Annimation to growth an element
+@keyframes displayTopIn {
+  0% {
+    position: initial;
+    top: initial;
+    opacity: 1;
+    z-index: 99;
+  }
+  100% {
+    position: initial;
+    top: initial;
+    opacity: 1;
+    z-index: 99;
+  }
+}
+//Annimation to growth an element
+@keyframes displayTopOut {
+  0% {
+    position: initial;
+    top: initial;
+    opacity: 1;
+    z-index: 99;
+  }
+  100% {
+    position: initial;
+    top: initial;
+    opacity: 1;
+    z-index: 99;
+  }
+}
 
 //function to call each transition & show/hide to simulate the page transition
 @mixin pager-animation($start, $end) {
@@ -134,6 +220,43 @@
   }
   & ~ .overlay {
     animation: 2s scaletoright2;
+  }
+  //page visibility management destination
+  & ~ #{$end} {
+    animation: hide 1s linear;
+    animation-fill-mode: forwards;
+  }
+  &:checked ~ #{$end} {
+    animation: show 1s linear;
+    animation-fill-mode: forwards;
+  }
+  //page visibility management source
+  & ~ #{$start} {
+    animation: show 1s linear;
+    animation-fill-mode: forwards;
+  }
+  &:checked ~ #{$start} {
+    animation: hide 1s linear;
+    animation-fill-mode: forwards;
+  }
+}
+
+@mixin pager-animation2($element, $start, $end) {
+  //page transition
+  &:checked ~ #{$start} > #{$element} {
+    animation: displayTopIn 1.5s linear;
+  }
+  //page transition
+  & ~ #{$start} > #{$element} {
+    animation: displayTopOut 1.5s linear;
+  }
+  //page transition
+  &:checked ~ #{$start} > #{$element} > DIV > IMG {
+    animation: growth 1.5s linear;
+  }
+  //page transition
+  & ~ #{$start} > #{$element} > DIV > IMG {
+    animation: smallth 1.5s linear;
   }
   //page visibility management destination
   & ~ #{$end} {
