@@ -18,12 +18,6 @@ body {
   background-color: var(--background-color);
   color: var(--text-color);
   background-image: var(--background-image);
-
-  & > .overlay-intro {
-  }
-
-  //all website in onepage
-  overflow: hidden;
 }
 
 //css for each content pages displayed

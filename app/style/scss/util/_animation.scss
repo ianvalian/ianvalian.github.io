@@ -157,12 +157,10 @@
 //Annimation to growth an element
 @keyframes growth {
   0% {
-    z-index: 99;
     opacity: 1;
     transform: scale(1);
   }
   100% {
-    z-index: 99;
     opacity: 1;
     transform: scale(50);
   }
@@ -170,13 +168,9 @@
 //Annimation to reduce de size of an element
 @keyframes smallth {
   0% {
-    z-index: 99;
-    opacity: 1;
     transform: scale(50);
   }
   100% {
-    z-index: 99;
-    opacity: 1;
     transform: scale(1);
   }
 }
@@ -184,14 +178,10 @@
 //Annimation to growth an element
 @keyframes displayTopIn {
   0% {
-    position: initial;
-    top: initial;
     opacity: 1;
     z-index: 99;
   }
   100% {
-    position: initial;
-    top: initial;
     opacity: 1;
     z-index: 99;
   }
@@ -199,14 +189,10 @@
 //Annimation to growth an element
 @keyframes displayTopOut {
   0% {
-    position: initial;
-    top: initial;
     opacity: 1;
     z-index: 99;
   }
   100% {
-    position: initial;
-    top: initial;
     opacity: 1;
     z-index: 99;
   }
@@ -246,7 +232,6 @@
   &:checked ~ #{$start} > #{$element} {
     animation: displayTopIn 1.5s linear;
   }
-  //page transition
   & ~ #{$start} > #{$element} {
     animation: displayTopOut 1.5s linear;
   }
@@ -254,7 +239,6 @@
   &:checked ~ #{$start} > #{$element} > DIV > IMG {
     animation: growth 1.5s linear;
   }
-  //page transition
   & ~ #{$start} > #{$element} > DIV > IMG {
     animation: smallth 1.5s linear;
   }
@@ -273,7 +257,7 @@
     animation-fill-mode: forwards;
   }
   &:checked ~ #{$start} {
-    animation: hide 1s linear;
+    animation: hideWithoutOpacity 1s linear;
     animation-fill-mode: forwards;
   }
 }
