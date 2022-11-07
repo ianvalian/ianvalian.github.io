@@ -106,6 +106,21 @@
   }
 }
 //Annimation to hide an element
+@keyframes hide2 {
+  0% {
+    position: fixed;
+    top: -1000vh;
+    opacity: 0;
+    z-index: -1;
+  }
+  100% {
+    position: fixed;
+    top: -1000vh;
+    opacity: 0;
+    z-index: -1;
+  }
+}
+//Annimation to hide an element
 @keyframes hideWithoutOpacity {
   0% {
     position: initial;
@@ -162,13 +177,13 @@
   }
   100% {
     opacity: 1;
-    transform: scale(50);
+    transform: scale(12);
   }
 }
 //Annimation to reduce de size of an element
 @keyframes smallth {
   0% {
-    transform: scale(50);
+    transform: scale(12);
   }
   100% {
     transform: scale(1);
@@ -244,7 +259,7 @@
   }
   //page visibility management destination
   & ~ #{$end} {
-    animation: hide 1s linear;
+    animation: hide2 1s linear;
     animation-fill-mode: forwards;
   }
   &:checked ~ #{$end} {
@@ -253,7 +268,7 @@
   }
   //page visibility management source
   & ~ #{$start} {
-    animation: show 1s linear;
+    animation: show2 1s linear;
     animation-fill-mode: forwards;
   }
   &:checked ~ #{$start} {
