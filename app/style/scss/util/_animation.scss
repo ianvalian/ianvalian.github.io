@@ -245,17 +245,17 @@
 @mixin pager-animation2($element, $start, $end) {
   //page transition
   &:checked ~ #{$start} > #{$element} {
-    animation: displayTopIn 1.5s linear;
+    animation: displayTopIn 1s linear;
   }
   & ~ #{$start} > #{$element} {
-    animation: displayTopOut 1.5s linear;
+    animation: displayTopOut 1s linear;
   }
   //page transition
   &:checked ~ #{$start} > #{$element} > DIV > IMG {
-    animation: growth 1.5s linear;
+    animation: growth 1s linear;
   }
   & ~ #{$start} > #{$element} > DIV > IMG {
-    animation: smallth 1.5s linear;
+    animation: smallth 1s linear;
   }
   //page visibility management destination
   & ~ #{$end} {
