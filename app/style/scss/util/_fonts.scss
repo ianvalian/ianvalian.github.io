@@ -1,2 +1,12 @@
 $font: "Sacramento", cursive;
 $sub-font: "Alegreya Sans SC", sans-serif;
+
+@font-face {
+  font-family: "heavenfield-typewriter";
+  src: url(util/font/Sweet-Hipster.ttf);
+}
+
+@font-face {
+  font-family: "heavenfield";
+  src: url(util/font/ostrich-regular.ttf);
+}

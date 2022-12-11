@@ -5,22 +5,30 @@ h2,
 h3 {
   text-align: center;
   font-weight: 700;
-  padding: u.rem(16) 0;
+  //padding: u.rem(16) 0;
   margin: 0;
 }
 
 h1 {
-  font-size: clamp(u.rem(28), u.rem(16) + 2vw, u.rem(40));
-
-  .parallax {
-    text-align: left;
-    color: white;
-    font-size: 75px;
+  &.heavenfield {
+    font-size: clamp(u.rem(16), u.rem(32) + 4vw, u.rem(100));
+    font-family: "heavenfield";
+  }
+  &.heavenfield-typewriter {
+    font-size: clamp(u.rem(32), u.rem(64) + 4vw, u.rem(100));
+    font-family: "heavenfield-typewriter";
   }
 }
 
 h2 {
-  font-size: clamp(u.rem(22), u.rem(14) + 2vw, u.rem(36));
+  &.heavenfield {
+    font-size: clamp(u.rem(8), u.rem(16) + 3vw, u.rem(50));
+    font-family: "heavenfield";
+  }
+  &.heavenfield-typewriter {
+    font-size: clamp(u.rem(16), u.rem(40) + 3vw, u.rem(80));
+    font-family: "heavenfield-typewriter";
+  }
 }
 
 p {

@@ -12,7 +12,7 @@
 }
 
 /******* PAGER pola1 *******/
-/*
+
 #pola1 {
   @include u.pager-animation(".image-stack", ".content01-stack");
 }
@@ -36,8 +36,8 @@
 #prog {
   @include u.pager-animation(".image-stack", ".content06-stack");
 }
-*/
 
+/*
 #pola1 {
   @include u.pager-animation2(
     ".image-stack__item--pola1",
@@ -84,3 +84,4 @@
     ".content06-stack"
   );
 }
+*/
