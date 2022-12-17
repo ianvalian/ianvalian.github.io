@@ -90,19 +90,24 @@
 //Annimation to hide an element
 @keyframes hide {
   0% {
-    position: initial;
+    position: fixed;
     top: initial;
     opacity: 1;
+    height: 100vh;
+    width: initial;
   }
   99% {
-    position: initial;
+    position: fixed;
     top: initial;
+    height: 100vh;
+    width: initial;
   }
   100% {
     position: fixed;
     top: -1000vh;
     opacity: 0;
     z-index: -1;
+    height: 0vh;
   }
 }
 //Annimation to hide an element
@@ -143,17 +148,20 @@
     top: -1000vh;
     opacity: 0;
     z-index: -1;
+    height: 0vh;
   }
   99% {
     position: fixed;
     top: -1000vh;
     opacity: 0;
     z-index: -1;
+    height: 0vh;
   }
   100% {
     position: initial;
     top: initial;
     opacity: 1;
+    height: 100vh;
   }
 }
 //Annimation to show an element
