@@ -22,19 +22,28 @@ body {
 
 //css for each content pages displayed
 page {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+
+  @include u.breakpoint-down(medium) {
+    flex-direction: column;
+  }
+}
+
+//css for each content pages displayed
+home {
+  display: grid;
+  //position: relative; // imperative for the overlapping to work
+  grid-template-columns: repeat(12, 1fr);
   @include u.breakpoint-down(medium) {
     grid-template-columns: repeat(6, 1fr);
   }
 
-  display: grid;
-  position: relative; // imperative for the overlapping to work
-  grid-template-columns: repeat(12, 1fr);
-
-  //height: 100vh;
-  margin-left: auto;
-  margin-right: auto;
-
-  overflow: hidden;
+  align-items: stretch;
+  justify-items: stretch;
+  justify-content: space-between;
+  align-content: center;
 }
 
 img {
@@ -97,7 +106,7 @@ img {
   //more hard stype to give some character to the transition (i prefer if i could use leaf)
   box-shadow: 0 0 50px #ccc;
   //background-image: linear-gradient(88deg, #99ad8a, #edefea);
-  background-image: var(--background-paper);
+  //background-image: var(--background-paper);
 }
 
 //content of the home page
@@ -254,33 +263,9 @@ img {
   z-index: -1;
 
   &__designWraper {
-    grid-row: 1;
-    grid-column: 1/13;
-    margin: 2rem;
-    background-color: white;
-    border: solid 5px #aa8b3b;
-    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
-
-    @include u.breakpoint-down(medium) {
-      grid-template-columns: repeat(6, 1fr);
-    }
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
   }
 
-  &__inside01 {
-    grid-column: 1/7;
-    padding: 1rem;
-  }
-  &__inside02 {
-    @include u.breakpoint-down(medium) {
-      grid-row: 2;
-      grid-column: 1/7;
-    }
-    grid-column: 7/13;
-    padding: 1rem;
-  }
-
+  /* decoration useless */
   &__angleEucalyptusLefttop {
     position: fixed;
     left: 0px;
