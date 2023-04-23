@@ -53,42 +53,48 @@ img {
 
 //overlay use for the intro animation
 .overlay-intro {
-  z-index: 10;
-  position: absolute;
-  top: 0%;
-  width: 100%;
   height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
 
-  animation: 1s intro forwards;
-  animation-delay: 5s;
+  perspective: 10px;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  .wraper-paralax {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vw;
+    transform-style: preserve-3d;
+    z-index: -1;
 
-  //background img
-  background-color: white;
-  background-image: var(--horizontal-overlay-background-image);
-  background-size: cover;
-  @include u.breakpoint-down(medium) {
-    background-image: var(--vertical-overlay-background-image);
-  }
+    .background,
+    .foreground {
+      position: absolute;
+      height: 100vw;
+      width: 100vw;
+      object-fit: cover;
+      z-index: -1;
+    }
 
-  img {
-    background-color: white;
-    max-width: 600px;
-    max-height: 100vh;
-    padding: 1rem;
+    .background {
+      transform: translateZ(-10px) scale(2);
+    }
+
+    .foreground {
+      transform: translateZ(-5px) scale(1);
+    }
   }
 
   .centred {
-    background-color: white;
     max-width: 600px;
     max-height: 100vh;
     padding: 1rem;
   }
 
-  overflow: hidden;
+  //DISABLE ANIMATION SPASHSCREEN SAVE THE DATE
+  /*animation: 1s intro forwards;
+  animation-delay: 5s;*/
 }
 
 //overlay use for the transition animation _animation/scaletoright
@@ -261,9 +267,6 @@ img {
   top: -1000vh;
   opacity: 0;
   z-index: -1;
-
-  &__designWraper {
-  }
 
   /* decoration useless */
   &__angleEucalyptusLefttop {
