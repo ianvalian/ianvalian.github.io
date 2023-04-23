@@ -64,33 +64,49 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vw;
+    height: 100%;
     transform-style: preserve-3d;
     z-index: -1;
 
     .background,
-    .foreground {
+    .foreground,
+    .frontground {
       position: absolute;
-      height: 100vw;
-      width: 100vw;
+      overflow: inherit;
+      height: 100%;
+      width: 100%;
       object-fit: cover;
       z-index: -1;
     }
 
     .background {
-      transform: translateZ(-10px) scale(2.5);
+      transform: translateZ(-10px) scale(2);
     }
 
     .foreground {
-      transform: translateZ(-5px) scale(0.85);
-      top: 46vw;
+      transform: translateZ(-5px) scale(0.8);
+      top: 30vw;
+    }
+
+    .frontground {
+      transform: translateZ(-0px) scale(1);
+      align-self: flex-end;
+    }
+
+    .top {
+      transform: translateZ(-1px) scale(1);
+      align-self: flex-end;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
     }
   }
 
   .centred {
-    max-width: 600px;
-    max-height: 100vh;
+    align-self: center;
     padding: 1rem;
+    display: flex;
+    flex-direction: column;
   }
 
   //DISABLE ANIMATION SPASHSCREEN SAVE THE DATE
