@@ -1,0 +1,188 @@
+@use "../util" as u;
+
+:root {
+  --background-color: hsl(0, 0%, 11%);
+  --text-color: white;
+  --negative-text-color: black;
+
+  //img
+  --background-image-01: url("/app/imgs/img01.jpg");
+  --background-image-02: url("/app/imgs/img02.jpg");
+  --background-image-orangerie: url("/app/imgs/kergrist-orangerie.png");
+  --mask01: url("/app/imgs/mask01.png");
+  --mask02: url("/app/imgs/mask02.png");
+  --mask03: url("/app/imgs/mask03.png");
+  --mask04: url("/app/imgs/mask04.png");
+  --mask05: url("/app/imgs/mask05.png");
+  --mask06: url("/app/imgs/mask06.png");
+
+  //img-lieu
+  --mairie: url("/app/imgs/mairie.jpg");
+  --logo-mairie: url("/app/imgs/logo_treb.jpg");
+  --orangerie: url("/app/imgs/kergrist-orangerie.jpg");
+  --logo-kergrist: url("/app/imgs/logo_kergrist.jpg");
+
+  //img-chambre
+  --campagne-01: url("/app/imgs/hebergement/a01_01.webp");
+  --campagne-02: url("/app/imgs/hebergement/a01_02.webp");
+  --campagne-03: url("/app/imgs/hebergement/a01_03.webp");
+
+  --boudoir-01: url("/app/imgs/hebergement/a02_01.webp");
+
+  --authentique-01: url("/app/imgs/hebergement/a03_01.webp");
+
+  //color
+  --terra-cotta: #c67351;
+  --terra-cota-rgba: 198, 115, 81;
+  --forest: #637364;
+  --forest-rgba: 99, 115, 100;
+  --cosmic-aura: #ccb2a3;
+  --yellow: #ebce2c;
+  --red: #e64a2c;
+}
+
+//color class
+.terra-cotta {
+  color: var(--terra-cotta);
+}
+.forest {
+  color: var(--forest);
+}
+.cosmic-aura {
+  color: var(--cosmic-aura);
+}
+.yellow {
+  color: var(--yellow);
+}
+.red {
+  color: var(--red);
+}
+
+//mask under the texte like a pencil overLine
+.overLine {
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+
+  &[color="terra-cotta"] {
+    --overLineColor: var(--terra-cotta);
+  }
+  &[color="forest"] {
+    --overLineColor: var(--forest);
+  }
+  &[color="cosmic-aura"] {
+    --overLineColor: var(--cosmic-aura);
+  }
+  &[color="yellow"] {
+    --overLineColor: var(--yellow);
+  }
+  &[color="red"] {
+    --overLineColor: var(--red);
+  }
+  &::after {
+    content: "";
+    //content definition
+    position: absolute;
+    top: 20%;
+    left: 0;
+    width: 95%;
+    height: 60%;
+    z-index: -1;
+    opacity: 0.6;
+    //mask definition
+    mask-image: var(--mask03);
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: cover;
+    mask-position: center;
+    //background definition
+    background: var(--overLineColor);
+    background-position: center;
+  }
+}
+
+.overlay {
+}
+
+//wraper of content with glass effect
+.back-glass {
+  &-basic {
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  &-xl {
+    @include u.breakpoint(large) {
+      width: map-get(u.$breakpoints-up, large);
+      padding: 2rem;
+
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 16px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+  }
+}
+
+//class color for the background
+.back-color {
+  &_terra-cotta {
+    background-color: var(--terra-cotta);
+  }
+  &_forest {
+    background-color: var(--forest);
+  }
+  &_cosmic-aura {
+    background-color: var(--cosmic-aura);
+  }
+  &_coronille {
+    background-color: var(--coronille);
+  }
+  &_yellow {
+    background-color: var(--yellow);
+  }
+  &_red {
+    background-color: var(--red);
+  }
+}
+
+//class to mask an content
+.img-mask {
+  &_01 {
+    mask-position: center;
+    mask-size: cover;
+    mask-image: var(--mask01);
+  }
+  &_02 {
+    mask-position: center;
+    mask-size: cover;
+    mask-image: var(--mask02);
+  }
+  &_03 {
+    mask-position: center;
+    mask-size: cover;
+    mask-image: var(--mask03);
+  }
+  &_04 {
+    mask-position: center;
+    mask-size: cover;
+    mask-image: var(--mask04);
+  }
+  &_05 {
+    mask-position: center;
+    mask-size: cover;
+    mask-image: var(--mask05);
+  }
+  &_06 {
+    mask-position: center;
+    mask-size: cover;
+    mask-image: var(--mask06);
+  }
+}

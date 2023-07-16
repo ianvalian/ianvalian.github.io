@@ -8,104 +8,49 @@
 }
 
 .grid {
-  @include u.breakpoint(medium) {
-    display: grid;
-    grid-template-columns: 1fr repeat(2, minmax(auto, u.rem(600))) 1fr;
+  --column-count: 3;
+  display: grid;
+  z-index: 1;
+  position: relative;
+
+  &__gap-xs {
+    gap: 0.1rem;
   }
-}
-
-// SPLASH
-.img-splash {
-  max-height: 40vh;
-  overflow: hidden;
-}
-
-.splash {
-  background: #fff6e5;
-  color: var(--negative-text-color);
-  padding-bottom: u.rem(32);
-}
-
-.splash-content,
-.more-content,
-.buckets ul {
-  grid-column: 2/4;
-}
-
-.splash-content {
-  padding: u.rem(32);
-}
-
-.splash-text {
-  @include u.breakpoint(medium) {
-    columns: 2;
-    column-gap: u.rem(32);
+  &__gap-s {
+    gap: 0.5rem;
   }
-}
+  &__gap-m {
+    gap: 1rem;
+  }
+  &__gap-l {
+    gap: 1.5rem;
+  }
+  &__gap-xl {
+    gap: 3rem;
+  }
 
-// MORE
-.more {
-  padding: u.rem(32);
-}
-
-// BUCKET
-.buckets {
-  padding: u.rem(32) u.rem(16) u.rem(16);
-  color: var(--negative-text-color);
-
-  & ul {
-    margin: 0;
-    padding: 0;
-
+  &__full {
+    grid-template-columns: 1fr;
+  }
+  &__3-513 {
+    grid-template-columns: 5fr 1fr 3fr;
+  }
+  &__auto-xs {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+  &__auto-s {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  &__auto-m {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     @include u.breakpoint(small) {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-around;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     }
   }
-
-  & li {
-    margin-bottom: u.rem(16);
-    background: white;
-    list-style-type: none;
-
-    @include u.breakpoint(small) {
-      width: 48%;
-    }
-
-    @include u.breakpoint(medium) {
-      width: 31%;
-    }
+  &__auto-l {
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
   }
-
-  &___bucket {
-    padding: u.rem(16);
+  &__auto-xl {
+    grid-template-columns: repeat(auto-fit, minmax(800px, 1fr));
   }
-}
-
-//TWINS
-.twin,
-.colophon aside {
-  @include u.breakpoint(medium) {
-    grid-column: span 2;
-  }
-}
-
-.twin {
-  padding: u.rem(32);
-  background: #2185c5;
-  color: white;
-
-  &:last-of-type {
-    background: #ff7f66;
-  }
-}
-
-//COLOPHON
-.colophon {
-  padding: u.rem(32);
-  background: hsl(0, 0%, 10%);
-  color: white;
-  text-align: center;
 }

@@ -1,12 +1,42 @@
 $font: "Sacramento", cursive;
 $sub-font: "Alegreya Sans SC", sans-serif;
 
+:root {
+  --font-standard: "texte-standard-roboto-light";
+  --font-manuscrit: "texte-manuscrit-alexanderLettering";
+}
+
+/*theme01*/
 @font-face {
-  font-family: "heavenfield-typewriter";
-  src: url(util/font/Sweet-Hipster.ttf);
+  font-family: "texte-standard";
+  src: url(util/font/ostrich-regular.ttf);
 }
 
 @font-face {
-  font-family: "heavenfield";
-  src: url(util/font/ostrich-regular.ttf);
+  font-family: "texte-manuscrit";
+  src: url(util/font/Sweet-Hipster.ttf);
+}
+
+/*theme02*/
+@font-face {
+  font-family: "texte-standard-madeinfinity-regular";
+  src: url(util/font/MadeInfinity-regular.otf);
+}
+@font-face {
+  font-family: "texte-standard-madeinfinity-thin";
+  src: url(util/font/MadeInfinity-thin.otf);
+}
+@font-face {
+  font-family: "texte-manuscrit-alexanderLettering";
+  src: url(util/font/AlexanderLettering.otf);
+}
+
+/*Additional*/
+@font-face {
+  font-family: "texte-standard-seconddate";
+  src: url(util/font/Second-date.otf);
+}
+@font-face {
+  font-family: "texte-standard-roboto-light";
+  src: url(util/font/Roboto-Light.ttf);
 }

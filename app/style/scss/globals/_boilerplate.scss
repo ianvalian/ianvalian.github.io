@@ -12,301 +12,211 @@ html {
 }
 
 body {
+  //boxing-management
   margin: 0;
   padding: 0;
-  font-family: u.$sub-font;
-  background-color: var(--background-color);
+
+  //font-management
   color: var(--text-color);
-  background-image: var(--background-image);
+  font-family: u.$font;
 }
 
-//css for each content pages displayed
+.hidden {
+  display: none !important;
+}
+
 page {
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: row;
-
-  @include u.breakpoint-down(medium) {
-    flex-direction: column;
-  }
-}
-
-//css for each content pages displayed
-home {
-  display: grid;
-  //position: relative; // imperative for the overlapping to work
-  grid-template-columns: repeat(12, 1fr);
-  @include u.breakpoint-down(medium) {
-    grid-template-columns: repeat(6, 1fr);
-  }
-
-  align-items: stretch;
-  justify-items: stretch;
-  justify-content: space-between;
-  align-content: center;
-}
-
-img {
-  width: 100%;
-  display: block;
-}
-
-//overlay use for the intro animation
-.overlay-intro {
-  height: 100vh;
+  min-height: 100vh;
   overflow-y: auto;
   overflow-x: hidden;
 
-  perspective: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 
-  .wraper-paralax {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    transform-style: preserve-3d;
-    z-index: -1;
+.saveTheDate {
+  //background management
+  background-image: var(--background-image-01);
+  background-position-x: 56% !important;
+  background-size: cover;
+  background-position: center;
+  background-size: 100%;
+  /*height: 110vh;*/
+  height: 100vh;
+  justify-content: flex-start;
+  position: relative;
 
-    .background,
-    .foreground,
-    .frontground {
-      position: absolute;
-      overflow: inherit;
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-      z-index: -1;
-    }
-
-    .background {
-      transform: translateZ(-10px) scale(2);
-    }
-
-    .foreground {
-      transform: translateZ(-5px) scale(0.8);
-      top: 30vw;
-    }
-
-    .top {
-      transform: translateZ(-1px) scale(1);
-      align-self: flex-end;
-      padding: 1rem;
-      display: flex;
-      flex-direction: column;
-    }
+  /*BLUR BACKGROUND PAGE EFFECT*/
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    /*height: 110vh;*/
+    height: 100vh;
+    background-color: rgba(var(--terra-cota-rgba), 0.2);
+    /*backdrop-filter: blur(7px);*/
+    pointer-events: none;
   }
 
-  .centred {
-    align-self: center;
-    padding: 1rem;
+  .saveTheDate-content {
+    //content-size-management
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 1;
+    //content-management
     display: flex;
     flex-direction: column;
-  }
+    justify-content: space-around;
+    align-items: center;
 
-  //DISABLE ANIMATION SPASHSCREEN SAVE THE DATE
-  /*animation: 1s intro forwards;
-  animation-delay: 5s;*/
-}
+    .middle {
+      //width management
+      width: 100%;
+      position: relative;
 
-//overlay use for the transition animation _animation/scaletoright
-.overlay {
-  background: white;
-  z-index: 5;
-  position: fixed;
-  top: 0%;
-  left: -25%;
-  width: 150%;
-  height: 100%;
-  transform: scaleX(0) skewX(-40deg);
-  transform-origin: left;
-
-  //more hard stype to give some character to the transition (i prefer if i could use leaf)
-  box-shadow: 0 0 50px #ccc;
-  //background-image: linear-gradient(88deg, #99ad8a, #edefea);
-  //background-image: var(--background-paper);
-}
-
-//content of the home page
-.image-stack {
-  // To make the content hidden during the transition between pages
-  &__item--pola1 {
-    grid-row: 1;
-    grid-column: 1/4;
-    margin-top: 1%; // slightly arbitrary, keeps proportion once resized
-    height: fit-content;
-
-    animation: float-slow 4s ease-in-out 0s infinite;
-    animation-play-state: paused;
-
-    &:hover {
-      animation-play-state: running;
-      z-index: 10;
+      &::after {
+        content: "";
+        //content definition
+        position: absolute;
+        top: 20%;
+        left: 0;
+        width: 95%;
+        height: 60%;
+        z-index: -1;
+        opacity: 0.6;
+        //mask definition
+        mask-image: var(--mask03);
+        mask-repeat: no-repeat;
+        mask-position: center;
+        mask-size: cover;
+        mask-position: center;
+        //background definition
+        background: #c67351;
+        background-position: center;
+      }
     }
   }
 
-  &__item--gift {
-    grid-row: 1;
-    grid-column: 1/5;
-    margin-top: 35%; // slightly arbitrary, keeps proportion once resized
-    z-index: 1; // tells the browser to make this image on top
-    height: fit-content;
+  /*EFFECT TRANSITION*/
+  /*&:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    display: inline-block;
+    border-right: 100vw solid transparent;
+    border-bottom: 10vh solid var(--cosmic-aura);
+  }*/
+}
 
-    animation: float-slow 4s ease-in-out 0s infinite;
-    animation-play-state: paused;
+.programmation {
+  background-color: var(--cosmic-aura);
+  background-size: cover;
+  background-position: center;
+  padding: 2rem;
 
-    &:hover {
-      animation-play-state: running;
-      z-index: 10;
-    }
+  //overright page flex to stretch content
+  align-items: stretch;
+}
+
+.break-photo01 {
+  //background management
+  background-image: var(--background-image-02);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    top: 0;
+    display: inline-block;
+    border-top: 10vh solid var(--cosmic-aura);
+    border-left: 100vw solid transparent;
+    z-index: 1;
   }
 
-  &__item--fleur {
-    grid-row: 1;
-    grid-column: 3/5;
-    margin-top: 10%; // slightly arbitrary, keeps proportion once resized
-    z-index: 3; // tells the browser to make this image on top
-    height: fit-content;
-
+  /*BLUR BACKGROUND PAGE EFFECT*/
+  &:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(var(--terra-cota-rgba), 0.2);
+    /*backdrop-filter: blur(7px);*/
     pointer-events: none;
-    cursor: default;
   }
+}
 
-  &__item--pola2 {
-    grid-row: 1;
-    grid-column: 4/7;
-    margin-top: 30%; // slightly arbitrary, keeps proportion once resized
-    z-index: 2; // tells the browser to make this image on top
-    height: fit-content;
+.lieu {
+  //position
+  position: relative;
 
-    animation: float-slow 4s ease-in-out 0s infinite;
-    animation-play-state: paused;
+  //background management
+  background-image: var(--background-image-domaine);
+  background-size: cover;
+  background-position: center;
+  padding: 2rem;
 
-    &:hover {
-      animation-play-state: running;
-      z-index: 10;
-    }
-  }
+  //overright page flex to stretch content
+  //align-items: stretch;
 
-  &__item--domaine {
-    grid-row: 1;
-    grid-column: 6/10;
-    margin-top: 70%; // slightly arbitrary, keeps proportion once resized
-    height: fit-content;
-
-    @include u.breakpoint-down(medium) {
-      margin-top: 60%;
-      grid-row: 2;
-      grid-column: 1/5;
-    }
-
-    animation: float-slow 4s ease-in-out 0s infinite;
-    animation-play-state: paused;
-
-    &:hover {
-      animation-play-state: running;
-      z-index: 10;
-    }
-  }
-
-  &__item--invit {
-    grid-row: 1;
-    grid-column: 6/10;
-    margin-top: 5%; // slightly arbitrary, keeps proportion once resized
-    z-index: 3; // tells the browser to make this image on top
-    height: fit-content;
-
-    @include u.breakpoint-down(medium) {
-      margin-top: 0%;
-      grid-row: 2;
-      grid-column: 1/5;
-    }
-
-    animation: float-slow 4s ease-in-out 0s infinite;
-    animation-play-state: paused;
-
-    &:hover {
-      animation-play-state: running;
-      z-index: 10;
-    }
-  }
-
-  &__item--leter {
-    grid-row: 1;
-    grid-column: 7/12;
-    height: fit-content;
-    visibility: hidden;
-
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(var(--forest-rgba), 0.4);
+    backdrop-filter: blur(7px);
     pointer-events: none;
-    cursor: default;
-
-    @include u.breakpoint-down(medium) {
-      grid-row: 2;
-      grid-column: 2/6;
-    }
   }
 
-  &__item--prog {
-    grid-row: 1;
-    grid-column: 10/13;
-    margin-top: 1%; // slightly arbitrary, keeps proportion once resized
-    height: fit-content;
-
-    @include u.breakpoint-down(medium) {
-      margin-top: 0%;
-      grid-row: 2;
-      grid-column: 4/7;
-    }
-
-    animation: float-slow 4s ease-in-out 0s infinite;
-    animation-play-state: paused;
-
-    &:hover {
-      animation-play-state: running;
-      z-index: 10;
-    }
+  .img-mairie {
+    background-image: var(--mairie);
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+    height: 10rem;
+    position: relative;
   }
-}
-
-//content of the pola1 page
-.content01-stack,
-.content02-stack,
-.content03-stack,
-.content04-stack,
-.content05-stack,
-.content06-stack {
-  position: fixed;
-  top: -1000vh;
-  opacity: 0;
-  z-index: -1;
-
-  /* decoration useless */
-  &__angleEucalyptusLefttop {
-    position: fixed;
-    left: 0px;
-    top: 0px;
-    width: 340px;
+  .logo-mairie {
+    content: var(--logo-mairie);
+    width: 5rem;
+    position: absolute;
+    z-index: 1;
+    top: -1rem;
+    left: -1rem;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
   }
-  &__angleEucalyptusRightbottom {
-    position: fixed;
-    right: 0px;
-    bottom: 0px;
-    width: 340px;
-
-    transform: rotate(180deg);
+  .img-orangerie {
+    background-image: var(--orangerie);
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+    height: 10rem;
+  }
+  .logo-kergrist {
+    content: var(--logo-kergrist);
+    width: 5rem;
+    position: absolute;
+    z-index: 1;
+    top: -1rem;
+    left: -1rem;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
   }
 }
 
-//class of the floating button on the content pages
-.float-return {
-  position: fixed;
-  left: 1rem;
-  bottom: 1rem;
-  padding: 1rem;
-  background-color: #aa8b3ba6;
-  color: #fff;
-  border-radius: 50px;
-  text-align: center;
-  box-shadow: 2px 2px 3px #999;
-  z-index: 10;
+.information {
+  //background management
+  background-color: var(--forest);
+  background-size: cover;
+  background-position: center;
 }

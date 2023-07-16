@@ -2,38 +2,79 @@
 
 h1,
 h2,
-h3 {
+h3,
+h4,
+p {
+  position: relative;
   text-align: center;
-  font-weight: 700;
-  //padding: u.rem(16) 0;
   margin: 0;
+  //Zindex to avoid blur effect
+  z-index: 1;
 }
 
 h1 {
-  &.heavenfield {
-    font-size: clamp(u.rem(16), u.rem(32) + 4vw, u.rem(100));
-    font-family: "heavenfield";
+  &.texte-standard {
+    font-size: clamp(u.rem(25), u.rem(40) + 4vw, u.rem(80));
+    font-family: var(--font-standard);
+    font-weight: 500;
   }
-  &.heavenfield-typewriter {
+  &.texte-manuscrit {
     font-size: clamp(u.rem(32), u.rem(64) + 4vw, u.rem(100));
-    font-family: "heavenfield-typewriter";
+    font-family: var(--font-manuscrit);
+    font-weight: 500;
   }
 }
 
 h2 {
-  &.heavenfield {
-    font-size: clamp(u.rem(8), u.rem(16) + 3vw, u.rem(50));
-    font-family: "heavenfield";
+  &.texte-standard {
+    font-size: clamp(u.rem(16), u.rem(35) + 3vw, u.rem(70));
+    font-family: var(--font-standard);
+    font-weight: 400;
   }
-  &.heavenfield-typewriter {
-    font-size: clamp(u.rem(16), u.rem(40) + 3vw, u.rem(80));
-    font-family: "heavenfield-typewriter";
+  &.texte-manuscrit {
+    font-size: clamp(u.rem(27), u.rem(54) + 3vw, u.rem(80));
+    font-family: var(--font-manuscrit);
+    font-weight: 400;
+  }
+}
+
+h3 {
+  &.texte-standard {
+    font-size: clamp(u.rem(10), u.rem(15) + 3vw, u.rem(50));
+    font-family: var(--font-standard);
+    font-weight: 300;
+  }
+  &.texte-manuscrit {
+    font-size: clamp(u.rem(12), u.rem(20) + 3vw, u.rem(50));
+    font-family: var(--font-manuscrit);
+    font-weight: 300;
+  }
+}
+
+h4 {
+  &.texte-standard {
+    font-size: clamp(u.rem(5), u.rem(10) + 3vw, u.rem(40));
+    font-family: var(--font-standard);
+    font-weight: 300;
+  }
+  &.texte-manuscrit {
+    font-size: clamp(u.rem(10), u.rem(17) + 3vw, u.rem(40));
+    font-family: var(--font-manuscrit);
+    font-weight: 300;
   }
 }
 
 p {
-  margin-top: 0;
-  font-size: u.rem(16);
+  &.texte-standard {
+    font-size: clamp(u.rem(3), u.rem(5) + 3vw, u.rem(20));
+    font-family: var(--font-standard);
+    font-weight: 300;
+  }
+  &.texte-manuscrit {
+    font-size: clamp(u.rem(10), u.rem(17) + 3vw, u.rem(50));
+    font-family: var(--font-manuscrit);
+    font-weight: 300;
+  }
 }
 
 a,
