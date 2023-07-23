@@ -16,6 +16,9 @@
   --mask05: url("/app/imgs/mask05.png");
   --mask06: url("/app/imgs/mask06.png");
 
+  --mask01-bottom: url("/app/imgs/mask01-bottom.png");
+  --mask01-top: url("/app/imgs/mask01-top.png");
+
   //img-lieu
   --mairie: url("/app/imgs/mairie.jpg");
   --logo-mairie: url("/app/imgs/logo_treb.jpg");
@@ -34,11 +37,21 @@
   //color
   --terra-cotta: #c67351;
   --terra-cota-rgba: 198, 115, 81;
+
   --forest: #637364;
   --forest-rgba: 99, 115, 100;
+
+  --sage: #9c9b7e;
+  --sage-rgba: 156, 155, 126;
+
   --cosmic-aura: #ccb2a3;
-  --yellow: #ebce2c;
-  --red: #e64a2c;
+  --cosmic-aura-rgba: 204, 178, 163;
+
+  --mustard: #b87e30;
+  --mustard-rgba: 184, 126, 48;
+
+  --rust: #874a2c;
+  --rust-rgba: 135, 74, 44;
 }
 
 //color class
@@ -103,6 +116,22 @@
 }
 
 .overlay {
+  /*need to be setup inside a contenent with position: relative*/
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  pointer-events: none;
+
+  &[color="terra-cotta"] {
+    background-color: rgba(var(--terra-cota-rgba), 0.2);
+  }
+  &[color="forest"] {
+    background-color: rgba(var(--forest-rgba), 0.2);
+  }
+
+  &__110 {
+    height: 110vh;
+  }
 }
 
 //wraper of content with glass effect

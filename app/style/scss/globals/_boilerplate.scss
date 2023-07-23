@@ -42,23 +42,9 @@ page {
   background-position-x: 56% !important;
   background-size: cover;
   background-position: center;
-  background-size: 100%;
-  /*height: 110vh;*/
-  height: 100vh;
+  height: 110vh;
   justify-content: flex-start;
   position: relative;
-
-  /*BLUR BACKGROUND PAGE EFFECT*/
-  &:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    /*height: 110vh;*/
-    height: 100vh;
-    background-color: rgba(var(--terra-cota-rgba), 0.2);
-    /*backdrop-filter: blur(7px);*/
-    pointer-events: none;
-  }
 
   .saveTheDate-content {
     //content-size-management
@@ -101,22 +87,27 @@ page {
   }
 
   /*EFFECT TRANSITION*/
-  /*&:after {
+  &:after {
     content: "";
     position: absolute;
     width: 100%;
+    height: 10vh;
     bottom: 0;
     display: inline-block;
-    border-right: 100vw solid transparent;
-    border-bottom: 10vh solid var(--cosmic-aura);
-  }*/
+    background-color: var(--cosmic-aura);
+    z-index: 1;
+
+    mask-position: center;
+    mask-size: cover;
+    mask-image: var(--mask01-top);
+  }
 }
 
 .programmation {
   background-color: var(--cosmic-aura);
   background-size: cover;
   background-position: center;
-  padding: 2rem;
+  padding: 0rem 2rem 0rem 2rem;
 
   //overright page flex to stretch content
   align-items: stretch;
@@ -125,30 +116,31 @@ page {
 .break-photo01 {
   //background management
   background-image: var(--background-image-02);
-  background-size: cover;
-  background-position: center;
   position: relative;
+  background-color: rgba(var(--terra-cota-rgba), 0.2);
 
   &:before {
     content: "";
     position: absolute;
     width: 100%;
+    height: 10vh;
     top: 0;
     display: inline-block;
-    border-top: 10vh solid var(--cosmic-aura);
-    border-left: 100vw solid transparent;
+    background-color: var(--cosmic-aura);
     z-index: 1;
-  }
 
-  /*BLUR BACKGROUND PAGE EFFECT*/
+    mask-position: center;
+    mask-size: cover;
+    mask-image: var(--mask01-bottom);
+  }
   &:after {
     content: "";
     position: absolute;
     width: 100%;
-    height: 100vh;
-    background-color: rgba(var(--terra-cota-rgba), 0.2);
-    /*backdrop-filter: blur(7px);*/
-    pointer-events: none;
+    bottom: 0;
+    display: inline-block;
+    border-right: 100vw solid transparent;
+    border-bottom: 10vh solid var(--forest);
   }
 }
 
@@ -157,25 +149,10 @@ page {
   position: relative;
 
   //background management
-  background-image: var(--background-image-domaine);
+  background-color: var(--forest);
   background-size: cover;
   background-position: center;
   padding: 2rem;
-
-  //overright page flex to stretch content
-  //align-items: stretch;
-
-  &:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(var(--forest-rgba), 0.4);
-    backdrop-filter: blur(7px);
-    pointer-events: none;
-  }
 
   .img-mairie {
     background-image: var(--mairie);
